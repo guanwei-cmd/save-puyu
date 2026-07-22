@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>守護璞玉田×台知園區</title>
+<meta name="description" content="這塊田，阿公種了一輩子。接下阿公的田，體驗被公文打斷 26 年的插秧人生。8/8 千手齊插秧，回璞玉田。">
+<meta property="og:title" content="守護璞玉田×台知園區">
+<meta property="og:description" content="這塊田，阿公種了一輩子。接下阿公的田，體驗被公文打斷 26 年的插秧人生。8/8 千手齊插秧，回璞玉田。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta name="theme-color" content="#4F9A4E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌾%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<style>
+:root{
+  --bg:#F3EAD3; --dot:#E4D7B4;
+  --surface:#FFFBF0; --cline:#EAD9AF; --cline2:#D9C48E;
+  --ink:#5B4A33; --muted:#94805F; --faint:#B4A283;
+  --cink:#5B4A33; --cmut:#8E7B5C; --cfaint:#B4A283;
+  --leaf:#4F9A4E; --leaf-deep:#3A7B42; --leaf-tint:#E5F1D6;
+  --coral:#DE6B4C; --coral-tint:#FBE4DA;
+  --sun:#D9992F; --sun-tint:#FAEDCF;
+  --wood:#8A6642; --wood-deep:#6E4F31;
+  --z-res:#E9C66C; --z-com:#DE9A60; --z-ind:#4F9A4E; --z-pub:#A3B9C6; --z-agr:#A9D07F; --z-keep:#EDF2D6;
+  --shadow:0 3px 0 rgba(122,96,58,.14),0 10px 24px rgba(122,96,58,.13);
+  --round:"Yuanti TC","STYuanti-TC","Yuanti SC","YouYuan","Chalkboard SE","PingFang TC","Noto Sans TC",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#22333F; --dot:#2B3F4D;
+    --ink:#EDE5CC; --muted:#BCC7BE; --faint:#8FA0A4;
+    --surface:#F7F0DA; --cline:#E3D2A8; --cline2:#CDB783;
+    --leaf:#7CC26F; --leaf-deep:#4F9A4E;
+    --shadow:0 3px 0 rgba(0,0,0,.3),0 12px 28px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#22333F; --dot:#2B3F4D;
+  --ink:#EDE5CC; --muted:#BCC7BE; --faint:#8FA0A4;
+  --surface:#F7F0DA; --cline:#E3D2A8; --cline2:#CDB783;
+  --leaf:#7CC26F; --leaf-deep:#4F9A4E;
+  --shadow:0 3px 0 rgba(0,0,0,.3),0 12px 28px rgba(0,0,0,.35);
+}
+:root[data-theme="light"]{
+  --bg:#F3EAD3; --dot:#E4D7B4;
+  --ink:#5B4A33; --muted:#94805F; --faint:#B4A283;
+  --surface:#FFFBF0; --cline:#EAD9AF; --cline2:#D9C48E;
+  --leaf:#4F9A4E; --leaf-deep:#3A7B42;
+  --shadow:0 3px 0 rgba(122,96,58,.14),0 10px 24px rgba(122,96,58,.13);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:var(--round);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;
+  background:var(--bg);
+  background-image:radial-gradient(var(--dot) 2.2px,transparent 2.6px);
+  background-size:26px 26px;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+a{color:var(--leaf-deep)}
+::selection{background:var(--leaf-tint)}
+p,li{text-wrap:pretty}
+.nb{white-space:nowrap}
+body.segged{word-break:keep-all;overflow-wrap:break-word}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:50;padding:10px 0;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(8px)}
+.nav-in{max-width:1040px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav-brand{font-weight:900;font-size:15px;margin-right:auto;text-decoration:none;background:var(--surface);border:2.5px solid var(--cline2);border-radius:999px;padding:6px 16px;box-shadow:var(--shadow);color:var(--cink)}
+.nav-brand em{font-style:normal;color:var(--leaf-deep)}
+nav a.nl{font-size:13px;font-weight:700;color:var(--cmut);text-decoration:none;padding:6px 13px;border-radius:999px;background:var(--surface);border:2px solid transparent}
+nav a.nl:hover{border-color:var(--leaf)}
+nav a.nl.act{background:var(--coral);color:#FFF7EC}
+
+/* ---------- speech bubble ---------- */
+.talk{display:flex;align-items:flex-end;gap:14px;margin:26px 0 30px;max-width:760px}
+.talk svg{flex:0 0 84px;width:84px;height:84px;filter:drop-shadow(0 3px 0 rgba(122,96,58,.15))}
+.bubble{position:relative;background:var(--surface);border-radius:22px;padding:20px 24px 16px;box-shadow:var(--shadow);color:var(--cink);font-size:16.5px;line-height:1.85;font-weight:600}
+.bubble::before{content:"";position:absolute;left:-10px;bottom:22px;width:22px;height:22px;background:var(--surface);border-radius:4px;transform:rotate(45deg)}
+.bubble .who{position:absolute;top:-14px;left:20px;background:var(--leaf);color:#FFFDF4;font-size:13px;font-weight:900;padding:3px 16px;border-radius:999px;letter-spacing:.1em;box-shadow:0 2px 0 rgba(58,123,66,.35)}
+.bubble p{margin:0}
+.bubble b{color:var(--leaf-deep)}
+
+/* ---------- hero ---------- */
+header{position:relative}
+.hero{max-width:1040px;margin:0 auto;padding:54px 16px 0;text-align:center}
+.demo-pill{display:inline-block;font-size:12.5px;font-weight:900;letter-spacing:.14em;color:#FFF7EC;background:var(--coral);border-radius:999px;padding:5px 18px;box-shadow:0 3px 0 rgba(160,66,40,.35);transform:rotate(-2deg)}
+h1{font-size:clamp(2.1rem,6.4vw,3.5rem);line-height:1.3;margin:22px auto 10px;font-weight:900;letter-spacing:.02em;text-wrap:balance;max-width:15em}
+h1 .hl{color:var(--leaf-deep);background:linear-gradient(transparent 62%,var(--leaf-tint) 62%);border-radius:4px;padding:0 4px}
+.hero-sub{font-size:16px;color:var(--muted);max-width:30em;margin:0 auto 22px;font-weight:700;line-height:1.9}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:12px}
+.btn{display:inline-block;text-decoration:none;font-family:var(--round);font-size:15px;font-weight:900;padding:11px 26px;border-radius:999px;border:none;cursor:pointer;box-shadow:0 4px 0 rgba(122,96,58,.25)}
+.btn.primary{background:var(--leaf);color:#FFFDF4;box-shadow:0 4px 0 var(--leaf-deep)}
+.btn.second{background:var(--surface);color:var(--cink)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(122,96,58,.25)}
+.proof{font-size:12.5px;color:var(--faint);font-weight:800;letter-spacing:.04em}
+#paddy{display:block;width:100%;height:120px;margin-top:8px}
+.grassedge{height:30px;background:radial-gradient(circle at 10px -8px,transparent 16px,var(--leaf) 17px);background-size:34px 30px;background-repeat:repeat-x;opacity:.9}
+.keynums{max-width:1040px;margin:-4px auto 0;padding:26px 16px 6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+.kn{background:var(--surface);border-radius:18px;padding:16px 18px;box-shadow:var(--shadow);text-align:center;color:var(--cink)}
+.kn b{display:block;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:900;color:var(--leaf-deep);font-variant-numeric:tabular-nums;line-height:1.2;white-space:nowrap}
+.kn.warn b{color:var(--coral)}
+.kn.gold b{color:var(--sun)}
+.kn span{font-size:12px;color:var(--cmut);line-height:1.55;display:block;margin-top:4px;font-weight:700}
+
+/* ---------- sections ---------- */
+main{max-width:1040px;margin:0 auto;padding:0 16px}
+section{padding:58px 0 16px;scroll-margin-top:70px}
+.sec-head{display:flex;align-items:center;gap:12px;justify-content:center;text-align:center;flex-direction:column}
+.leafnum{display:inline-flex;align-items:center;gap:8px;background:var(--leaf);color:#FFFDF4;font-weight:900;font-size:14px;letter-spacing:.22em;border-radius:999px;padding:5px 20px;box-shadow:0 3px 0 var(--leaf-deep)}
+h2{font-size:clamp(1.5rem,3.6vw,2.1rem);margin:12px 0 4px;font-weight:900;line-height:1.35;text-wrap:balance;text-align:center}
+.src{font-size:11.5px;color:var(--faint);line-height:1.7;font-weight:600}
+.card{background:var(--surface);border-radius:22px;box-shadow:var(--shadow);color:var(--cink)}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- 田裡的26年 小遊戲 ---------- */
+.game{padding:26px 26px 22px;max-width:760px;margin:0 auto}
+.hud{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.hud span{background:var(--bg);border-radius:999px;padding:6px 16px;font-weight:900;font-size:13.5px;color:var(--cmut);white-space:nowrap}
+:root[data-theme="dark"] .hud span{background:#EFE5C8}
+.hud .hud-year{background:var(--wood);color:#FFF7EC}
+.hud b{color:var(--leaf-deep);font-variant-numeric:tabular-nums}
+.game-goal{text-align:center;font-weight:900;font-size:15.5px;margin:2px 0 14px}
+.field{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;background:linear-gradient(#D3E7DD,#C3E0D2);border-radius:18px;padding:12px;border:3px solid var(--cline)}
+.plot{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;border-radius:10px;background:#B0D4C6;position:relative;transition:transform .12s}
+.plot:hover{transform:scale(1.06)}
+.plot:focus-visible{outline:3px solid var(--leaf);outline-offset:2px}
+.plot::after{content:"";position:absolute;inset:34% 40%;border-radius:50%;background:rgba(255,255,255,.3)}
+.plot.planted{cursor:default;background:#9DCAB8}
+.plot.planted::after{display:none}
+.plot svg{position:absolute;inset:12%;width:76%;height:76%;animation:pop .35s ease;pointer-events:none}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.3)}100%{transform:scale(1)}}
+.stake{position:absolute;top:-8px;right:3px;width:3px;height:24px;background:#7A5A3A;z-index:2;animation:pop .3s ease}
+.stake::before{content:"";position:absolute;top:0;left:3px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:12px solid var(--coral)}
+.toast{text-align:center;font-size:13.5px;color:var(--cmut);font-weight:800;margin:14px 0 0;min-height:1.7em;line-height:1.7}
+.ending{background:var(--leaf-tint);border-radius:18px;padding:24px 22px;margin-top:16px;text-align:center}
+.ending h3{margin:0 0 8px;font-size:21px;font-weight:900;color:var(--leaf-deep)}
+.ending p{margin:0 0 10px;font-size:14.5px;font-weight:700;line-height:1.9}
+.ending .e-punch{font-size:17px;font-weight:900;color:var(--coral)}
+.e-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+dialog#evDlg{border:none;border-radius:26px;padding:0;max-width:430px;width:calc(100vw - 40px);background:transparent}
+dialog#evDlg::backdrop{background:rgba(60,48,30,.55);backdrop-filter:blur(3px)}
+.ev-paper{background:var(--surface);border-radius:22px;padding:30px 26px 20px;text-align:center;position:relative;color:var(--cink);box-shadow:0 24px 80px rgba(0,0,0,.4);border:6px solid var(--wood)}
+.ev-paper .pin{position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--coral);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.ev-year{display:inline-block;background:var(--coral);color:#FFF7EC;border-radius:999px;padding:3px 16px;font-weight:900;font-size:13px;letter-spacing:.1em;white-space:nowrap}
+.ev-paper h3{font-size:21px;margin:12px 0 8px;font-weight:900}
+.ev-paper p{font-size:14.5px;line-height:1.9;font-weight:700;margin:0 0 16px}
+.ev-note{font-size:11px;color:var(--cfaint);margin:10px 0 0;font-weight:700}
+.ev-paper.warm{border-color:var(--leaf)}
+.ev-paper.warm .pin{background:var(--leaf)}
+.ev-paper.warm .ev-year{background:var(--leaf)}
+
+/* ---------- 守田人證 ---------- */
+.cert{position:relative;max-width:340px;margin:14px auto 16px;background:var(--surface);border:3px dashed var(--leaf);border-radius:16px;padding:20px 22px 18px;text-align:center;box-shadow:var(--shadow)}
+.cert-head{font-size:14px;letter-spacing:.4em;font-weight:900;color:var(--leaf-deep)}
+.cert-no{font-family:var(--mono);font-size:13px;color:var(--cmut);font-weight:700;margin:4px 0 8px}
+.cert-line{margin:0 0 6px;font-size:15px;font-weight:900;line-height:1.8}
+.cert-stats{margin:0;font-size:11.5px;color:var(--cmut);font-weight:700}
+.cert-stamp{position:absolute;right:12px;bottom:12px;width:52px;height:52px;border:3px solid var(--coral);border-radius:50%;color:var(--coral);font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;transform:rotate(-12deg);opacity:.85;letter-spacing:.1em}
+
+/* ---------- 共存的一天 ---------- */
+.day{padding:24px 26px;max-width:720px;margin:0 auto}
+.d-row{display:flex;gap:16px;padding:15px 0;border-top:2px dashed var(--cline);align-items:flex-start}
+.d-row:first-child{border-top:none;padding-top:4px}
+.d-time{flex:0 0 auto;font-family:var(--mono);font-size:13px;font-weight:700;background:var(--leaf-tint);color:var(--leaf-deep);border-radius:999px;padding:4px 12px;margin-top:2px;white-space:nowrap}
+.d-txt{margin:0 0 6px;font-size:14.5px;font-weight:700;line-height:1.8}
+.d-mech{display:inline-block;font-size:11.5px;color:var(--cmut);background:var(--bg);border-radius:999px;padding:2px 12px;font-weight:800}
+:root[data-theme="dark"] .d-mech{background:#EFE5C8}
+
+/* ---------- 規劃桌 ---------- */
+.plan{padding:24px 26px;max-width:860px;margin:0 auto}
+.tools,.plan-presets{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px}
+.plan-presets{margin-bottom:0;margin-top:2px}
+.tool{font-family:var(--round);font-weight:900;font-size:14px;padding:9px 16px;border-radius:999px;border:2.5px solid var(--cline2);background:var(--surface);color:var(--cmut);cursor:pointer;box-shadow:0 3px 0 rgba(122,96,58,.12);white-space:nowrap}
+.tool:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(122,96,58,.12)}
+.tool.on{border-color:var(--leaf);background:var(--leaf);color:#FFFDF4;box-shadow:0 3px 0 var(--leaf-deep)}
+.planmap{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;background:linear-gradient(#D3E7DD,#C3E0D2);border:3px solid var(--cline);border-radius:16px;padding:10px}
+.cell{all:unset;box-sizing:border-box;aspect-ratio:1;border-radius:6px;background:var(--z-agr);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:clamp(9px,2.6vw,17px);line-height:1;transition:transform .1s}
+.cell:hover{transform:scale(1.12)}
+.cell:focus-visible{outline:3px solid var(--leaf);outline-offset:1px}
+.cell.vill{background:#E7D9B8}
+.cell.t-ind{background:#B7CBD9}
+.cell.t-res{background:#EFD9A0}
+.cell.t-pub{background:#CFCAB8}
+.cell.flat{box-shadow:inset 0 0 0 3px var(--coral)}
+.plan-hint{font-size:12px;color:var(--cmut);text-align:center;font-weight:700;margin:10px 0 14px}
+.dash{display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:10px;margin-bottom:14px}
+.dchip{background:var(--bg);border-radius:14px;padding:10px 12px;text-align:center}
+:root[data-theme="dark"] .dchip{background:#EFE5C8}
+.dchip b{display:block;font-size:1.15rem;font-weight:900;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--cink)}
+.dchip span{font-size:11px;color:var(--cmut);font-weight:800}
+.dchip.warn b{color:var(--coral)}
+.mini{font-style:normal;font-size:9.5px;background:var(--sun-tint);color:var(--sun);border-radius:999px;padding:1px 6px;font-weight:900}
+.meters{display:grid;gap:12px;margin-bottom:14px}
+.m-top{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:800;color:var(--cmut);margin-bottom:4px;flex-wrap:wrap}
+.meter .mbar{height:16px;border-radius:999px;background:var(--bg);overflow:hidden}
+:root[data-theme="dark"] .meter .mbar{background:#EFE5C8}
+.meter .mbar i{display:block;height:100%;border-radius:999px;background:var(--leaf);transition:width .3s;width:0}
+.pverdict{border-radius:16px;padding:13px 18px;font-size:14.5px;font-weight:900;text-align:center;line-height:1.75;margin-bottom:14px}
+.pverdict.ok{background:var(--leaf-tint);color:var(--leaf-deep)}
+.pverdict.mid{background:var(--sun-tint);color:var(--sun)}
+.pverdict.bad{background:var(--coral-tint);color:var(--coral)}
+
+/* ---------- ha grid ---------- */
+.mode-btns{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 18px;justify-content:center}
+.mode-btns button{font-family:var(--round);font-size:13.5px;font-weight:900;padding:9px 18px;border-radius:999px;border:2.5px solid var(--cline2);background:var(--surface);color:var(--cmut);cursor:pointer;box-shadow:0 3px 0 rgba(122,96,58,.12);white-space:nowrap}
+.mode-btns button[aria-pressed="true"]{border-color:var(--leaf);color:#FFFDF4;background:var(--leaf);box-shadow:0 3px 0 var(--leaf-deep)}
+.gridwrap{padding:24px 24px 20px;max-width:820px;margin:0 auto}
+#haGrid{display:grid;grid-template-columns:repeat(30,1fr);gap:3px}
+#haGrid i{aspect-ratio:1;border-radius:3px;background:var(--z-keep);transition:background .5s ease,opacity .5s ease}
+#haGrid i.res{background:var(--z-res)}
+#haGrid i.com{background:var(--z-com)}
+#haGrid i.ind{background:var(--z-ind)}
+#haGrid i.pub{background:var(--z-pub)}
+#haGrid i.agr{background:var(--z-agr)}
+#haGrid i.core{background:var(--leaf-deep)}
+#haGrid i.take{background:var(--coral);opacity:.6}
+#haGrid i.cut{background:repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px);opacity:.5}
+@media (max-width:640px){#haGrid{grid-template-columns:repeat(20,1fr)}}
+.legend{display:flex;gap:12px 18px;flex-wrap:wrap;margin-top:16px;font-size:12px;color:var(--cmut);font-weight:700;justify-content:center}
+.legend .l{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.legend .sw{width:13px;height:13px;border-radius:4px;display:inline-block}
+.grid-cap{font-size:16.5px;margin:16px 0 0;font-weight:900;text-align:center;line-height:1.75}
+.grid-cap b{color:var(--leaf-deep);font-variant-numeric:tabular-nums;white-space:nowrap}
+.grid-cap .warn{color:var(--coral)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+@media (max-width:820px){.two-col{grid-template-columns:1fr}}
+.pane{padding:22px 24px}
+.pane h3{font-size:17px;margin:0 0 8px;font-weight:900;color:var(--leaf-deep)}
+.pane .small{font-size:13px;color:var(--cmut);font-weight:600;margin:0 0 6px}
+.parks{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 6px}
+.parks i{width:22px;height:22px;border-radius:6px;background:var(--z-agr);position:relative;display:inline-block}
+.parks i::after{content:"";position:absolute;inset:5px;border-radius:50% 50% 4px 4px;background:var(--leaf-deep)}
+.parks i.half{opacity:.45}
+.parks i.core-p{background:var(--sun-tint)}
+.parks i.core-p::after{background:var(--sun)}
+.mapfig svg{width:100%;height:auto;display:block;border-radius:14px}
+.cap{font-size:11.5px;color:var(--cfaint);margin-top:8px;line-height:1.7;font-weight:600}
+
+/* ---------- terms ---------- */
+.board{background:var(--wood);border-radius:24px;padding:14px;max-width:760px;margin:0 auto;box-shadow:var(--shadow)}
+.board .paper{background:var(--surface);border-radius:14px;padding:22px 26px;position:relative;color:var(--cink)}
+.board .pin{position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--coral);box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.board .bd-head{font-size:12px;letter-spacing:.2em;color:var(--coral);font-weight:900;margin-bottom:10px;text-align:center}
+.board p{margin:0 0 8px;font-size:16px;line-height:2.05;font-weight:600}
+.board .cite{font-size:11.5px;color:var(--cfaint);display:block;margin-top:8px;text-align:center;font-weight:600}
+button.term{all:unset;cursor:pointer;color:var(--leaf-deep);font-weight:900;border-bottom:3px dotted var(--leaf);padding-bottom:1px;font-family:inherit;white-space:nowrap}
+button.term:hover{background:var(--leaf-tint);border-radius:4px}
+button.term:focus-visible{outline:3px solid var(--leaf);outline-offset:2px;border-radius:4px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px auto 6px;justify-content:center;max-width:720px}
+.chips button{font-family:var(--round);font-size:14px;padding:9px 18px;border-radius:999px;border:none;background:var(--surface);color:var(--leaf-deep);cursor:pointer;font-weight:900;box-shadow:0 3px 0 rgba(122,96,58,.18);white-space:nowrap}
+.chips button:hover{background:var(--leaf-tint)}
+.chips button:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(122,96,58,.18)}
+.hint{font-size:12.5px;color:var(--muted);margin:12px 0 0;font-weight:700;text-align:center}
+.vsgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:820px;margin:30px auto 0}
+@media (max-width:680px){.vsgrid{grid-template-columns:1fr}}
+.vscard{border-radius:22px;padding:22px 24px;box-shadow:var(--shadow)}
+.vscard.a{background:var(--surface);color:var(--cink)}
+.vscard.b{background:var(--leaf);color:#F4FBEE}
+.vscard h3{margin:0 0 2px;font-size:20px;font-weight:900}
+.vscard .sub{font-size:12.5px;opacity:.75;font-weight:700;margin:0 0 12px}
+.vscard ul{margin:0;padding:0;list-style:none}
+.vscard li{padding:8px 0 8px 26px;position:relative;font-size:14px;line-height:1.7;font-weight:700;border-top:2px dashed rgba(122,96,58,.15)}
+.vscard.b li{border-top-color:rgba(255,255,255,.25)}
+.vscard li::before{content:"";position:absolute;left:2px;top:14px;width:12px;height:12px;border-radius:50%}
+.vscard.a li::before{background:var(--cline2)}
+.vscard.b li::before{background:#CDEBAE}
+.vs-verdict{max-width:820px;margin:18px auto 0;text-align:center;font-size:16.5px;font-weight:900;line-height:1.8}
+.vs-verdict b{color:var(--coral)}
+dialog#termDlg{border:none;border-radius:26px;padding:0;max-width:480px;width:calc(100vw - 36px);background:var(--surface);color:var(--cink);box-shadow:0 24px 80px rgba(0,0,0,.4)}
+dialog#termDlg::backdrop{background:rgba(60,48,30,.5);backdrop-filter:blur(3px)}
+.dlg-head{padding:26px 26px 12px;position:relative;text-align:center}
+.dlg-head .who{position:absolute;top:14px;left:26px;background:var(--leaf);color:#FFFDF4;font-size:12px;font-weight:900;padding:3px 14px;border-radius:999px;letter-spacing:.12em}
+.dlg-head h3{font-size:24px;margin:14px 0 4px;font-weight:900}
+.dlg-head p{margin:0;font-size:13.5px;color:var(--cmut);font-weight:700}
+.dlg-close{all:unset;cursor:pointer;position:absolute;top:16px;right:18px;font-size:20px;color:var(--cfaint);background:var(--bg);border-radius:50%;width:34px;height:34px;text-align:center;line-height:34px}
+:root[data-theme="dark"] .dlg-close{background:#EFE5C8}
+.dlg-close:hover{color:var(--cink)}
+.dlg-body{padding:6px 26px 20px;max-height:58vh;overflow-y:auto}
+.dlg-body h4{font-size:11.5px;letter-spacing:.2em;color:var(--leaf-deep);margin:16px 0 4px;font-weight:900}
+.dlg-body h4:first-child{margin-top:0}
+.dlg-body p{margin:0;font-size:14.5px;line-height:1.9;font-weight:600}
+.dlg-body .law{font-family:var(--mono);font-size:12px;background:var(--bg);border-radius:10px;padding:9px 13px;color:var(--cmut);line-height:1.7}
+:root[data-theme="dark"] .dlg-body .law{background:#EDE3C6}
+.dlg-foot{padding:0 26px 20px;font-size:11px;color:var(--cfaint);text-align:center;font-weight:600}
+
+/* ---------- disputes + coex ---------- */
+.disp{margin:0 auto 14px;border-radius:20px;background:var(--surface);overflow:hidden;box-shadow:var(--shadow);max-width:820px;color:var(--cink)}
+.disp summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:16px 22px;font-weight:900;font-size:16.5px}
+.disp summary::-webkit-details-marker{display:none}
+.disp summary .no{flex:0 0 auto;background:var(--coral);color:#FFF7EC;font-size:12px;border-radius:999px;padding:3px 12px;letter-spacing:.08em;white-space:nowrap}
+.disp summary .arrow{margin-left:auto;color:var(--cfaint);transition:transform .25s;font-size:14px}
+.disp[open] summary .arrow{transform:rotate(90deg)}
+.disp-body{padding:0 22px 18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){.disp-body{grid-template-columns:1fr}}
+.say{border-radius:16px;padding:13px 17px;font-size:13.5px;line-height:1.8;font-weight:600}
+.say h5{margin:0 0 4px;font-size:11.5px;letter-spacing:.16em;font-weight:900}
+.say p{margin:0}
+.say.gov{background:var(--coral-tint)}
+.say.gov h5{color:var(--coral)}
+.say.civ{background:var(--sun-tint)}
+.say.civ h5{color:var(--sun)}
+.say.fact{grid-column:1 / -1;background:var(--leaf-tint)}
+.say.fact h5{color:var(--leaf-deep)}
+.coex-head{text-align:center;font-size:17px;font-weight:900;margin:36px 0 14px}
+.coex{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:0 auto 8px;max-width:860px}
+.coex .cx{padding:18px 20px;text-align:center}
+.coex .cx-ic{width:44px;height:44px;border-radius:50%;background:var(--leaf-tint);margin:0 auto 8px;display:flex;align-items:center;justify-content:center}
+.coex h3{font-size:15.5px;margin:0 0 6px;font-weight:900;color:var(--leaf-deep)}
+.coex p{margin:0;font-size:13px;color:var(--cmut);line-height:1.75;font-weight:600}
+
+/* ---------- timeline ---------- */
+.tl-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px;justify-content:center}
+.tl-filters button{font-family:var(--round);font-size:13px;font-weight:900;padding:7px 16px;border-radius:999px;border:2.5px solid var(--cline2);background:var(--surface);color:var(--cmut);cursor:pointer}
+.tl-filters button[aria-pressed="true"]{background:var(--wood);color:#FFF7EC;border-color:var(--wood)}
+.tl{position:relative;margin:0 auto;padding:0;list-style:none;max-width:660px}
+.tl::before{content:"";position:absolute;left:104px;top:6px;bottom:6px;width:0;border-left:4px dotted var(--cline2)}
+.tl li{position:relative;display:grid;grid-template-columns:86px 40px 1fr;padding:0 0 18px}
+.tl li.hidden{display:none}
+.tl.collapsed li:not(.big){display:none}
+.tl .d{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;padding-top:10px;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap}
+.tl .dot{position:relative}
+.tl .dot::before{content:"";position:absolute;left:12px;top:12px;width:14px;height:14px;border-radius:50%;background:var(--faint);border:3.5px solid var(--bg)}
+.tl li[data-t="gov"] .dot::before{background:var(--coral)}
+.tl li[data-t="civ"] .dot::before{background:var(--sun)}
+.tl li[data-t="law"] .dot::before{background:var(--leaf)}
+.tl .ev{background:var(--surface);border-radius:16px;padding:10px 16px;box-shadow:var(--shadow);color:var(--cink)}
+.tl li.big .ev{border:2.5px solid var(--leaf)}
+.tl li[data-t="gov"].big .ev{border-color:var(--coral)}
+.tl li[data-t="civ"].big .ev{border-color:var(--sun)}
+.tl .ev h4{margin:0;font-size:15px;font-weight:900;line-height:1.55}
+.tl .ev p{margin:2px 0 0;font-size:13px;color:var(--cmut);line-height:1.7;font-weight:600}
+.tl .future .ev{border-style:dashed}
+@media (max-width:620px){
+  .tl::before{left:10px}
+  .tl li{grid-template-columns:0 30px 1fr}
+  .tl .d{text-align:left;grid-column:3;order:-1;padding:0 0 2px}
+  .tl .dot::before{left:2px}
+}
+.tl-more{text-align:center;margin:6px 0 0}
+
+/* ---------- action board ---------- */
+.band{background:var(--wood);border-radius:26px;padding:16px;margin:66px auto 30px;max-width:860px;box-shadow:var(--shadow)}
+.band .paper{background:var(--surface);border-radius:18px;padding:30px 30px 24px;text-align:center;position:relative;color:var(--cink)}
+.band .pin{position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:var(--coral);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.band .k{font-size:12px;letter-spacing:.26em;font-weight:900;color:var(--coral);margin-bottom:8px}
+.band h2{margin:0 0 10px;font-size:clamp(1.5rem,3.4vw,2.05rem)}
+.band p{margin:0 auto 8px;max-width:34em;font-size:15px;font-weight:700;line-height:1.9}
+.band .date{font-family:var(--mono);font-size:15px;color:var(--leaf-deep);font-weight:900}
+.band .fine{font-size:11px;color:var(--cfaint);margin-top:14px;font-weight:600}
+.band .e-btns{margin-top:12px}
+
+/* footer */
+footer{margin-top:20px}
+.foot-in{max-width:860px;margin:0 auto;padding:8px 16px 52px;font-size:12px;color:var(--muted);line-height:2;font-weight:600}
+.foot-card{background:var(--surface);border-radius:20px;padding:22px 26px;box-shadow:var(--shadow);color:var(--cmut)}
+.foot-card h4{font-size:13.5px;color:var(--cink);margin:12px 0 2px;font-weight:900}
+.foot-card h4:first-child{margin-top:0}
+.foot-card p{margin:0}
+</style>
+
+<nav aria-label="頁內導覽">
+  <div class="nav-in">
+    <a class="nav-brand" href="#top">🌾 璞玉田<em>×</em>台知園區</a>
+    <a class="nl" href="#s1">壹 下田</a>
+    <a class="nl" href="#s2">貳 這塊田</a>
+    <a class="nl" href="#s3">參 未來</a>
+    <a class="nl" href="#s4">肆 名詞</a>
+    <a class="nl" href="#s5">伍 爭議</a>
+    <a class="nl" href="#s6">陸 大事記</a>
+    <a class="nl act" href="#action">8/8 行動</a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero">
+    <a class="demo-pill" href="#action" style="text-decoration:none">8/8 千手齊插秧</a>
+    <h1>這塊田，<span class="hl">阿公種了一輩子</span></h1>
+    <p class="hero-sub">2000 年，他把田交給你。<br>同一年，公文也來了。</p>
+    <div class="hero-ctas">
+      <a class="btn primary" href="#s1">🌾 接下這塊田</a>
+      <a class="btn second" href="#action">8/8 行動資訊</a>
+    </div>
+    <p class="proof">逾 50 個公民團體聲援・上萬人連署・審了 14 次還沒審完</p>
+  </div>
+  <canvas id="paddy" aria-hidden="true"></canvas>
+  <div class="grassedge" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<!-- ============ 壹 下田 ============ -->
+<section id="s1">
+  <div class="sec-head"><span class="leafnum">壹・接下這塊田</span><h2>阿公把田交給你了</h2></div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><path d="M56,12 C58,8 63,7 65,9" fill="none" stroke="#8A6642" stroke-width="2"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/><path d="M20,60 C16,56 16,50 19,47" fill="none" stroke="#8A6642" stroke-width="2.5"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>我是小鷺。你阿公還在種田的時候，我就住在這裡了。現在田交給你囉。要做的事只有一件：<b>把秧插滿 <span class="nb">30 格</span></b>。……應該很簡單吧？嘿嘿。</p></div>
+  </div>
+
+  <div class="card game" id="gameCard">
+    <div class="hud">
+      <span class="hud-year" id="hYear">2000 年</span>
+      <span>🌱 插秧 <b id="hPlant">0</b> 次</span>
+      <span>📋 開會 <b id="hMeet">0</b> 場</span>
+    </div>
+    <p class="game-goal" id="gameGoal">阿公的田，30 格。點格子，把秧插滿吧。</p>
+    <div class="field" id="field" role="group" aria-label="點格子插秧"></div>
+    <p class="toast" id="toast">點下去就對了，很療癒喔。</p>
+    <div class="ending" id="ending" hidden>
+      <h3>田，種完了</h3>
+      <p>你插了 <b id="ePlant"></b> 次秧，被公文打斷 <b id="eMeet"></b> 次。<br>現實裡的他們，26 年了，還在種。</p>
+      <div class="cert">
+        <div class="cert-head">守 田 人 證</div>
+        <div class="cert-no" id="certNo"></div>
+        <p class="cert-line">我接下了阿公的田，也把它種完了。</p>
+        <p class="cert-stats" id="certStats"></p>
+        <span class="cert-stamp" aria-hidden="true">守田</span>
+      </div>
+      <p class="e-punch">下一個插秧的日子：<span class="nb">8 月 8 日</span>，璞玉田。</p>
+      <div class="e-btns">
+        <button class="btn primary" id="shareBtn">分享我的守田人證</button>
+        <a class="btn second" href="#action">8/8 我要到場</a>
+        <button class="btn second" id="replay">再玩一次</button>
+      </div>
+    </div>
+    <p class="src" style="text-align:center;margin-top:14px">阿田是故事角色；信裡的每一個事件，都真實發生過。完整出處見頁尾。</p>
+  </div>
+
+  <dialog id="evDlg" aria-labelledby="evTitle">
+    <div class="ev-paper">
+      <span class="pin"></span>
+      <div class="ev-year" id="evYear"></div>
+      <h3 id="evTitle"></h3>
+      <p id="evBody"></p>
+      <button class="btn primary" id="evBtn"></button>
+      <p class="ev-note" id="evNote">（公文沒辦法已讀不回）</p>
+    </div>
+  </dialog>
+</section>
+
+<!-- ============ 貳 空間 ============ -->
+<section id="s2">
+  <div class="sec-head"><span class="leafnum">貳・這塊田</span><h2>阿公的田，就在這裡</h2></div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>剛剛遊戲裡說的「核定 <span class="nb">142 公頃</span>、徵收 <span class="nb">447 公頃</span>」，長這樣。<b>一個格子＝一公頃</b>，按按看三顆按鈕。</p></div>
+  </div>
+  <div class="keynums" style="padding-top:0;margin-bottom:20px">
+    <div class="kn"><b>26 年</b><span>2000 年推動至今</span></div>
+    <div class="kn warn"><b>447 公頃</b><span>區段徵收原案<br>現行約 435 公頃</span></div>
+    <div class="kn gold"><b>142 公頃</b><span>行政院核定的<br>重大建設範圍</span></div>
+    <div class="kn"><b>逾 9 成</b><span>範圍內是<br>特定農業區</span></div>
+  </div>
+  <div class="mode-btns" role="group" aria-label="方案切換">
+    <button aria-pressed="false" data-m="m447">2004 原案 447</button>
+    <button aria-pressed="true" data-m="m435">現行計畫 435</button>
+    <button aria-pressed="false" data-m="m142">核定範圍 142</button>
+  </div>
+  <div class="card gridwrap">
+    <div id="haGrid" aria-hidden="true"></div>
+    <p class="grid-cap" id="gridCap"></p>
+    <div class="legend" id="gridLeg"></div>
+  </div>
+
+  <div class="two-col">
+    <div class="card pane">
+      <h3>換算一下</h3>
+      <p class="small">以<span class="nb">大安森林公園</span>（約 <span class="nb">26 公頃</span>）為一單位：</p>
+      <p style="margin:0;font-weight:900;font-size:14.5px"><span class="nb">447 公頃</span> ≈ <span class="nb">17 座</span></p>
+      <div class="parks" id="parks447" aria-hidden="true"></div>
+      <p style="margin:8px 0 0;font-weight:900;font-size:14.5px"><span class="nb">142 公頃</span> ≈ <span class="nb">5.5 座</span></p>
+      <div class="parks" id="parks142" aria-hidden="true"></div>
+    </div>
+    <div class="card pane">
+      <h3>在哪裡？</h3>
+      <div class="mapfig">
+        <svg viewBox="0 0 460 290" role="img" aria-label="台知園區位置示意圖">
+          <rect x="0" y="0" width="460" height="290" fill="#DDEAC8" rx="14"/>
+          <path d="M0,230 C90,216 180,240 270,226 C350,214 410,230 460,220 L460,262 C400,272 330,256 250,268 C160,280 70,256 0,270 Z" fill="#A9CFDC"/>
+          <text x="18" y="256" font-size="12" fill="#5B7A87" font-weight="700">頭前溪</text>
+          <line x1="30" y1="206" x2="430" y2="176" stroke="#B9AE93" stroke-width="4" stroke-dasharray="10 6"/>
+          <circle cx="180" cy="195" r="8" fill="#8A6642"/>
+          <text x="142" y="182" font-size="12" fill="#5B4A33" font-weight="900">高鐵六家站</text>
+          <rect x="52" y="56" width="118" height="118" fill="#F2E9CF" stroke="#CDB783" stroke-width="2" rx="12"/>
+          <text x="76" y="120" font-size="12" fill="#94805F" font-weight="700">竹北市區</text>
+          <path d="M196,48 L392,40 L420,116 L400,192 L292,204 L216,164 Z" fill="#BBDD90" stroke="#DE6B4C" stroke-width="3" stroke-dasharray="8 6"/>
+          <path d="M232,80 L318,74 L332,128 L248,136 Z" fill="#3A7B42"/>
+          <text x="250" y="110" font-size="11.5" fill="#FFFDF4" font-weight="900">142 公頃</text>
+          <text x="292" y="58" font-size="12" fill="#DE6B4C" font-weight="900">台知園區範圍（示意）</text>
+          <text x="228" y="184" font-size="10.5" fill="#5B4A33" font-weight="700">東海里・東興里・隘口里</text>
+          <text x="356" y="202" font-size="10.5" fill="#5B4A33" font-weight="700">芎林下山村</text>
+        </svg>
+        <p class="cap">示意圖，非精確地界；正確範圍以縣府公告之計畫圖為準。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 參 未來 ============ -->
+<section id="s3">
+  <div class="sec-head"><span class="leafnum">參・我們想要的未來</span><h2>共存，長什麼樣子？</h2></div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>守田不是把時間倒回去。田友們想的未來是：<b>園區的燈亮著，田裡的秧也綠著</b>。我們把那一天排出來給你看。</p></div>
+  </div>
+
+  <div class="card day">
+    <div class="d-row"><span class="d-time">05:30</span><div><p class="d-txt">阿田伯下田巡水。這片特定農業區的良田，本來就不在核定範圍裡。</p><span class="d-mech">機制：縮回 142 公頃核定範圍</span></div></div>
+    <div class="d-row"><span class="d-time">07:40</span><div><p class="d-txt">孩子們到田邊上自然課。璞玉田已經是近 30 個友善農耕與實驗教育點的基地。</p><span class="d-mech">機制：農業×教育，現在進行式</span></div></div>
+    <div class="d-row"><span class="d-time">09:00</span><div><p class="d-txt">研究員刷卡進園區上班。142 公頃核心照樣開發，產業照樣進駐。</p><span class="d-mech">機制：2004 年行政院核定範圍</span></div></div>
+    <div class="d-row"><span class="d-time">12:00</span><div><p class="d-txt">三合院開伙，四代同堂。聚落不用拆。</p><span class="d-mech">機制：原位置保留（土徵條例第 47 條）</span></div></div>
+    <div class="d-row"><span class="d-time">17:30</span><div><p class="d-txt">白鷺鷥回巢。產業需求如果真的長大，再分期評估下一塊，而不是先把田全部收走。</p><span class="d-mech">機制：分期分段開發（2016 都委會提示）</span></div></div>
+  </div>
+  <p class="src" style="text-align:center;max-width:560px;margin:16px auto 0">場景是願景示意，但每一行背後的機制都查證過：縮小方案有都委會決議基礎、原位置保留是現行法律、友善農耕點位是現在進行式。共存不是幻想，是既有制度就做得到的事。</p>
+
+  <div class="talk" style="margin-top:44px">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>規劃桌來了！選個道具，在田上蓋蓋看：<b>要放多少產業、幾家公司、多少人口，你決定</b>。棕色小屋是住了幾代人的聚落，蓋上去之前，想一下喔。</p></div>
+  </div>
+
+  <div class="card plan">
+    <div class="tools" role="group" aria-label="規劃道具">
+      <button class="tool on" data-t="ind">🏭 產業園區</button>
+      <button class="tool" data-t="res">🏘️ 住宅</button>
+      <button class="tool" data-t="pub">🏫 公共設施</button>
+      <button class="tool" data-t="farm">🌾 還原成田</button>
+    </div>
+    <div class="planmap" id="planMap" role="group" aria-label="規劃地圖"></div>
+    <p class="plan-hint">一格約 4 公頃，全區約 447 公頃。🏠 是聚落，一格約 290 戶。</p>
+
+    <div class="dash">
+      <div class="dchip"><b id="pLand">0 公頃</b><span>已開發土地</span></div>
+      <div class="dchip"><b id="pFirm">0 家</b><span>進駐公司 <i class="mini">示意</i></span></div>
+      <div class="dchip"><b id="pJobs">0 人</b><span>工作機會 <i class="mini">示意</i></span></div>
+      <div class="dchip"><b id="pPop">0 人</b><span>進駐人口 <i class="mini">示意</i></span></div>
+      <div class="dchip warn"><b id="pHomes">0 戶</b><span>聚落被拆</span></div>
+    </div>
+
+    <div class="meters">
+      <div class="meter"><div class="m-top"><span>產業需求（核定 142 公頃）</span><span id="mIndNote"></span></div><div class="mbar"><i id="mInd"></i></div></div>
+      <div class="meter"><div class="m-top"><span>白鷺鷥的棲地（剩下的田）</span><span id="mBirdNote"></span></div><div class="mbar"><i id="mBird" style="background:var(--z-agr)"></i></div></div>
+      <div class="meter"><div class="m-top"><span>竹北用水壓力 <i class="mini">示意</i></span><span id="mWaterNote"></span></div><div class="mbar"><i id="mWater" style="background:var(--sun)"></i></div></div>
+    </div>
+
+    <div class="pverdict" id="pVerdict"></div>
+
+    <div class="plan-presets">
+      <button class="tool" id="pre142">排出 142 方案</button>
+      <button class="tool" id="pre435">排出縣府 435 方案</button>
+      <button class="tool" id="preClear">全部還原成田</button>
+    </div>
+    <p class="src" style="text-align:center;margin-top:14px">公司數、就業與用水係數為示意量級，用來感受規模與取捨，不是精確預測；居住密度依縣府計畫書（每公頃 242 人）。</p>
+  </div>
+</section>
+
+<!-- ============ 肆 名詞 ============ -->
+<section id="s4">
+  <div class="sec-head"><span class="leafnum">肆・名詞解碼</span><h2>看不懂的詞，點一下就懂</h2></div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>遊戲裡那些會，名字都很像，效力卻差很多。<b>綠色虛線的詞都可以點</b>！先試試佈告欄上這條真的法條。</p></div>
+  </div>
+
+  <div class="board">
+    <div class="paper">
+      <span class="pin"></span>
+      <div class="bd-head">佈告欄・土地徵收條例 第 10 條（節錄）</div>
+      <p>徵收前應舉行<button class="term" data-k="gonting">公聽會</button>，聽取地主與利害關係人意見。但已辦過<button class="term" data-k="shuoming">說明會</button>者，不在此限。</p>
+      <p><button class="term" data-k="tenong">特定農業區</button>經行政院核定為重大建設須辦理徵收者，若有爭議，應依行政程序法舉行<button class="term" data-k="tingzheng">聽證</button>。</p>
+      <span class="cite">條號經全國法規資料庫核對。8 月的聽證會，法律依據就是第二段。</span>
+    </div>
+  </div>
+
+  <div class="chips" id="chipRow" role="group" aria-label="名詞卡列表"></div>
+  <p class="hint">所有法條條號均經全國法規資料庫核對。</p>
+
+  <div class="vsgrid">
+    <div class="vscard a">
+      <h3>公聽會</h3>
+      <p class="sub">像意見信箱＋座談會</p>
+      <ul>
+        <li>徵收案原則上都要辦，門檻低</li>
+        <li>意見會被記下來，但<b>政府不必採納</b></li>
+        <li>救濟照一般程序：先訴願、再打官司</li>
+      </ul>
+    </div>
+    <div class="vscard b">
+      <h3>聽證會</h3>
+      <p class="sub">像準法庭，可舉證、對質發問</p>
+      <ul>
+        <li>特定農業區＋重大建設＋有爭議，才強制辦</li>
+        <li>政府<b>必須逐點回應</b>採納或不採納的理由</li>
+        <li>之後可以跳過訴願、直接告上法院</li>
+      </ul>
+    </div>
+  </div>
+  <p class="vs-verdict">一句話：公聽會是「聽了不一定要理」，聽證會是「<b>講了政府必須回應</b>」。<br>所以爭的不是多開幾場會，是<b>會的等級</b>。</p>
+</section>
+
+<!-- ============ 伍 爭議 ============ -->
+<section id="s5">
+  <div class="sec-head"><span class="leafnum">伍・爭議點</span><h2>這麼簡單，為什麼吵了 26 年？</h2></div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>我們立場很清楚，但<b>事實要禁得起查</b>。每個爭點都放上兩邊說法，加一條查證過的事實，你自己判斷。</p></div>
+  </div>
+
+  <details class="disp" open>
+    <summary><span class="no">爭點 1</span>核定 142，為何徵收 400 多？<span class="arrow">▶</span></summary>
+    <div class="disp-body">
+      <div class="say gov"><h5>官方說</h5><p>整體開發才完整，區段徵收讓地主共享利益。</p></div>
+      <div class="say civ"><h5>自救會說</h5><p>核定的只有 <span class="nb">142 公頃</span>，多出的 <span class="nb">300 公頃</span>是搭便車的超額徵收。</p></div>
+      <div class="say fact"><h5>查證過的事實</h5><p>都委會 2015 年曾並陳「縮小至 <span class="nb">142 公頃</span>」案，2016 年大會更決議「以 <span class="nb">142 公頃</span>為基礎」。縮小方案是官方自己提過的。</p></div>
+    </div>
+  </details>
+
+  <details class="disp">
+    <summary><span class="no">爭點 2</span>特定農業區能徵收嗎？<span class="arrow">▶</span></summary>
+    <div class="disp-body">
+      <div class="say gov"><h5>官方說</h5><p>本案經行政院核定為重大建設，符合例外規定。</p></div>
+      <div class="say civ"><h5>自救會說</h5><p>核定範圍是 <span class="nb">142 公頃</span>，不是整個園區。用 142 的核定正當化 <span class="nb">400 公頃</span>特農區徵收，是偷換範圍。</p></div>
+      <div class="say fact"><h5>查證過的事實</h5><p>法律明定特農區原則不得徵收（土徵條例第 3 條之 1）。園區內特農區占比，各來源估 96.5% 至 99%。</p></div>
+    </div>
+  </details>
+
+  <details class="disp">
+    <summary><span class="no">爭點 3</span>九成同意，還是四千戶反對？<span class="arrow">▶</span></summary>
+    <div class="disp-body">
+      <div class="say gov"><h5>官方說</h5><p><span class="nb">3,616 位</span>地主中 <span class="nb">3,389 位</span>贊成，以持分計約 93.7% 同意。</p></div>
+      <div class="say civ"><h5>自救會說</h5><p>持分面積不等於人。田裡有 <span class="nb">4,000 多戶</span>客家聚落，反對連署超過一萬人。</p></div>
+      <div class="say fact"><h5>查證過的事實</h5><p>兩組數字都存在，但母體不同：一個算地權持分，一個算居住與生活。「民意」怎麼算，本身就是爭點。</p></div>
+    </div>
+  </details>
+
+  <details class="disp">
+    <summary><span class="no">爭點 4</span>新竹還需要 400 公頃新市鎮？<span class="arrow">▶</span></summary>
+    <div class="disp-body">
+      <div class="say gov"><h5>官方說</h5><p>配合 AI 科技城市願景，計畫人口 <span class="nb">33,000 人</span>。</p></div>
+      <div class="say civ"><h5>自救會說</h5><p>竹竹苗已有 <span class="nb">4.7 萬戶</span>空屋、<span class="nb">926 公頃</span>閒置住商用地、<span class="nb">457 公頃</span>閒置工業區。</p></div>
+      <div class="say fact"><h5>查證過的事實</h5><p>2021 年審議時，新增的 <span class="nb">53 公頃</span>產業區還被都委會委員指「於法無據」，全案補件再審。</p></div>
+    </div>
+  </details>
+
+  <details class="disp">
+    <summary><span class="no">爭點 5</span>8 月的聽證會，保障還是過場？<span class="arrow">▶</span></summary>
+    <div class="disp-body">
+      <div class="say gov"><h5>官方說</h5><p>依都委會要求辦理聽證，2025 年已先辦說明會邀 <span class="nb">4,200 位</span>地主。</p></div>
+      <div class="say civ"><h5>自救會說</h5><p>超出 <span class="nb">142 公頃</span>的土地依法無從辦聽證。對錯誤的範圍開聽證，是拿程序背書，所以訴求「停開無效聽證會」。</p></div>
+      <div class="say fact"><h5>查證過的事實</h5><p>連經濟部都說 2025 年 7 月那場只是「意見蒐集」，不是法定聽證程序。正式聽證預定 8 月中下旬，日期尚未公告。</p></div>
+    </div>
+  </details>
+
+  <p class="src" style="text-align:center;max-width:560px;margin:8px auto 0">爭了 26 年，其實解方一直都在：往上看「參・我們想要的未來」。</p>
+</section>
+
+<!-- ============ 陸 大事記 ============ -->
+<section id="s6">
+  <div class="sec-head"><span class="leafnum">陸・大事記</span><h2>26 年，完整的紀錄在這裡</h2></div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>遊戲裡那些公文都是真的，出處都在這裡。<span style="color:var(--coral);font-weight:900">紅點是官方程序</span>，<span style="color:var(--sun);font-weight:900">黃點是我們下田的日子</span>。公文每動一次，大家就得放下鋤頭去開會。</p></div>
+  </div>
+  <div class="tl-filters" id="tlFilters" role="group" aria-label="時間軸篩選" hidden>
+    <button aria-pressed="true" data-f="all">全部</button>
+    <button aria-pressed="false" data-f="gov">官方程序</button>
+    <button aria-pressed="false" data-f="civ">居民行動</button>
+    <button aria-pressed="false" data-f="law">法規</button>
+  </div>
+  <ol class="tl collapsed" id="tl"></ol>
+  <div class="tl-more"><button class="btn second" id="tlToggle">展開完整大事記（18 件）</button></div>
+  <p class="src" style="text-align:center;max-width:560px;margin:16px auto 0">事件經多來源交叉查核：焦點事件、新竹縣政府都市計畫紀錄、環境資訊中心、公視新聞、客新聞、環境權保障基金會。完整出處連結見頁尾。</p>
+</section>
+
+<!-- ============ 行動 ============ -->
+<div class="band" id="action">
+  <div class="paper">
+    <span class="pin"></span>
+    <div class="k">活動預告・2026.08.08・父親節</div>
+    <h2>千手齊插秧，種田護神山</h2>
+    <p>八月中下旬就要開聽證會了。在那之前，回到璞玉田，一起把秧苗種下去。</p>
+    <p>訴求：<b style="color:var(--coral)">停開無效聽證會，重新檢討台知計畫</b></p>
+    <p class="date"><span class="nb">2026 年 8 月 8 日（六）</span>｜集合資訊以主辦公告為準</p>
+    <div class="e-btns">
+      <a class="btn primary" href="https://erf.org.tw/" target="_blank" rel="noopener">看主辦最新公告</a>
+      <a class="btn second" href="https://savepuyu.weebly.com/" target="_blank" rel="noopener">連署反對台知計畫</a>
+      <button class="btn second" id="bandShare">把行動傳出去</button>
+    </div>
+    <p class="fine">主辦：竹北璞玉自救會×救璞玉公民行動｜資訊來源：環境權保障基金會 2026.07.16 新聞稿</p>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-card">
+      <h4>關於本頁</h4>
+      <p>本頁整理竹北璞玉田（台知園區）土地徵收爭議的公開資訊。標示「示意」者為示意圖像或示範性推估；其餘數字與事件均經多方公開來源交叉查核。行動與活動資訊，以竹北璞玉自救會與環境權保障基金會的公告為準。</p>
+      <h4>資料來源</h4>
+      <p><a href="https://eventsinfocus.org/issues/7146732" target="_blank" rel="noopener">焦點事件・台知園區大事記</a>｜<a href="https://www.hsinchu.gov.tw/News_Content.aspx?n=148&amp;s=3351" target="_blank" rel="noopener">新竹縣政府・都市計畫程序紀錄</a>｜<a href="https://e-info.org.tw/node/226541" target="_blank" rel="noopener">環境資訊中心</a>｜<a href="https://news.pts.org.tw/article/696065" target="_blank" rel="noopener">公視新聞</a>｜<a href="https://ourisland.pts.org.tw/content/11509" target="_blank" rel="noopener">我們的島</a>｜<a href="https://hakkanews.tw/2025/07/01/protecting-the-uncut-jade-209385/" target="_blank" rel="noopener">客新聞</a>｜<a href="https://erf.org.tw/" target="_blank" rel="noopener">環境權保障基金會</a>｜<a href="https://savepuyu.weebly.com/" target="_blank" rel="noopener">救璞玉連署</a></p>
+      <p>法律名詞解說之條號均經<a href="https://law.moj.gov.tw/" target="_blank" rel="noopener">全國法規資料庫</a>核對（2026 年 7 月），並參照司法院釋字第 709、739、742 號解釋。內容為法普摘要，非個案法律意見。</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="termDlg" aria-labelledby="dlgTitle">
+  <div class="dlg-head">
+    <span class="who">小鷺解說</span>
+    <button class="dlg-close" id="dlgClose" aria-label="關閉">×</button>
+    <h3 id="dlgTitle"></h3>
+    <p id="dlgOne"></p>
+  </div>
+  <div class="dlg-body">
+    <h4>白話說</h4><p id="dlgPlain"></p>
+    <h4>法條依據</h4><p class="law" id="dlgLaw"></p>
+    <h4>對居民的意義</h4><p id="dlgWhy"></p>
+  </div>
+  <p class="dlg-foot">條號經全國法規資料庫核對（2026.07）。法普摘要，非個案法律意見。</p>
+</dialog>
+
+<script>
+(function(){
+"use strict";
+/* ---- 中文斷詞：所有詞不從中間斷行 ---- */
+var SEGON=!!(window.Intl&&Intl.Segmenter);
+var SEGGER=SEGON?new Intl.Segmenter("zh-Hant",{granularity:"word"}):null;
+function reseg(root){
+  if(!SEGON||!root)return;
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);
+  var nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(function(n){
+    var v=n.nodeValue;
+    if(!v||v.indexOf("​")>-1)return;
+    if(!/[㐀-鿿]/.test(v))return;
+    var p=n.parentNode;
+    if(p&&(p.nodeName==="SCRIPT"||p.nodeName==="STYLE"))return;
+    var out="",it=SEGGER.segment(v)[Symbol.iterator](),r;
+    while(!(r=it.next()).done){out+=r.value.segment+"​";}
+    n.nodeValue=out.slice(0,-1);
+  });
+}
+/* v2：斷點只放在詞與詞之間；標點緊貼前詞、不出現行首標點；數字與單位不拆 */
+reseg=function(root){
+  if(!SEGON||!root)return;
+  var ZW="​";
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);
+  var nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(function(n){
+    var v=n.nodeValue;
+    if(!v||v.indexOf(ZW)>-1)return;
+    if(!/[㐀-鿿]/.test(v))return;
+    var p=n.parentNode;
+    if(p&&(p.nodeName==="SCRIPT"||p.nodeName==="STYLE"))return;
+    var out="",it=SEGGER.segment(v)[Symbol.iterator](),r,prev=null;
+    while(!(r=it.next()).done){
+      var s=r.value;
+      if(s.isWordLike&&out&&prev){
+        if(prev.isWordLike&&!/^[0-9A-Za-z%.．]+$/.test(prev.segment)){out+=ZW;}
+        else if(!prev.isWordLike&&!/[「『（【《〈]\s*$/.test(out)){out+=ZW;}
+      }
+      out+=s.segment;prev=s;
+    }
+    n.nodeValue=out;
+  });
+};
+
+/* ============ 田裡的 26 年（小遊戲）============ */
+var FIELD=document.getElementById("field"),TOAST=document.getElementById("toast");
+var hYear=document.getElementById("hYear"),hPlant=document.getElementById("hPlant"),hMeet=document.getElementById("hMeet");
+var evDlg=document.getElementById("evDlg");
+var SPROUT='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 V10 M12 12 C9 10.5 7 7.5 7 4.5 M12 12 C15 10.5 17 7.5 17 4.5" stroke="#3A7B42" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>';
+var GEVENTS=[
+ {at:1,year:"2000・春",title:"阿公的信",warm:1,body:'阿田：<br>阿公老了，這塊田交給你。<br>春天記得插秧，田埂上的白鷺鷥會陪你。<br>田在，家就在。<span style="display:block;text-align:right;margin-top:6px">——阿公</span>',btn:"我會好好種的",meet:0,after:"田是你的了。慢慢種，不急。",btn2:"開始插秧"},
+ {at:3,year:"2000",title:"璞玉計畫來了",body:'交大與縣府簽約推動大型開發計畫，阿公留給你的田，就在規劃範圍裡。里長說：要去開說明會喔。',btn:"放下鋤頭，去開會",meet:1,after:"第一場說明會開完了。你聽到好多聽不懂的新名詞。"},
+ {at:6,year:"2004",title:"行政院核定了",body:'核定的重大建設是 <span class="nb">142 公頃</span>，但區段徵收範圍劃了 <span class="nb">447 公頃</span>。阿公的田，在那 447 裡面。',btn:"放下鋤頭，去開會",meet:1,stakes:5,after:"開完會回來，田邊多了幾支紅色測量樁。"},
+ {at:9,year:"2011",title:"法律修了",body:'土徵條例修正：特定農業區原則不得徵收。村裡的人覺得，有希望了。',btn:"放下鋤頭，去開會",meet:1,after:"這次開會，大家討論到半夜才回家。"},
+ {at:12,year:"2015–2016",title:"都委會退回計畫",body:'審了又審，內政部都委會大會決議：縮小面積，以 <span class="nb">142 公頃</span>為基礎。',btn:"放下鋤頭，去開會",meet:2,unstake:3,after:"有幾支紅樁被拔掉了。今年的稻子，特別甜。"},
+ {at:15,year:"2018–2020",title:"計畫又回來了",body:'新縣長把計畫列為政見重啟，縮成 <span class="nb">435 公頃</span>重新送審。',btn:"放下鋤頭，去開會",meet:1,stakes:4,after:"紅樁又插回來了。秧，還是要插。"},
+ {at:18,year:"2020.08",title:"這次不開會了",warm:1,body:'百人插秧、上萬人連署。大家決定用阿公的方式守田：把秧，種回去。',btn:"大家一起下田！",meet:0,plant:6,after:"一百雙手一起插秧，半片田一天就插完了。",btn2:"太好了，繼續種！"},
+ {at:24,year:"2021–2024",title:"第 13、14 次專案小組",body:'委員說新增的 <span class="nb">53 公頃</span>「於法無據」；後來又決議：要先辦聽證，才能繼續審。',btn:"放下鋤頭，去開會",meet:2,after:"你已經數不清，這是第幾場會了。"},
+ {at:27,year:"2025.07",title:"4,200 封開會通知",body:'聽證前說明會寄出 <span class="nb">4,200 份</span>通知。經濟部說：這不是法定聽證，只是意見蒐集。',btn:"放下鋤頭，去開會",meet:1,after:"又一場「不算數」的會。通知單收進抽屜，裡面已經一疊了。"},
+ {at:30,year:"2026.07",title:"下一個插秧的日子",warm:1,body:'正式聽證會訂在 8 月中下旬。而 <span class="nb">8 月 8 日</span>父親節，田友們約好回到田裡，一起插秧。阿公的田，等你。',btn:"先把秧插完",meet:0,final:1}
+];
+var planted=0,meets=0,evIdx=0,plots=[],busy=false,gdone=false;
+function buildField(){
+  FIELD.innerHTML="";plots=[];
+  for(var i=0;i<30;i++){(function(i){
+    var b=document.createElement("button");b.className="plot";b.type="button";b.setAttribute("aria-label","插秧");
+    b.addEventListener("click",function(){plantAt(i)});
+    FIELD.appendChild(b);plots.push(b);
+  })(i);}
+}
+function doPlant(b){
+  b.classList.add("planted");b.insertAdjacentHTML("beforeend",SPROUT);b.disabled=true;
+  planted++;hPlant.textContent=planted;
+}
+function plantAt(i){
+  var b=plots[i];
+  if(gdone||busy||!b||b.classList.contains("planted"))return;
+  doPlant(b);checkEvents();
+}
+function autoPlant(n){
+  var empty=[];plots.forEach(function(b,i){if(!b.classList.contains("planted"))empty.push(i)});
+  for(var k=0;k<n&&empty.length;k++){
+    var j=empty.splice(Math.floor(Math.random()*empty.length),1)[0];
+    doPlant(plots[j]);
+  }
+}
+function addStakes(n){
+  var cand=plots.filter(function(b){return !b.querySelector(".stake")});
+  for(var k=0;k<n&&cand.length;k++){
+    var b=cand.splice(Math.floor(Math.random()*cand.length),1)[0];
+    var s=document.createElement("i");s.className="stake";s.setAttribute("aria-hidden","true");b.appendChild(s);
+  }
+}
+function removeStakes(n){
+  var st=Array.prototype.slice.call(FIELD.querySelectorAll(".stake"));
+  for(var k=0;k<n&&st.length;k++){st.splice(Math.floor(Math.random()*st.length),1)[0].remove();}
+}
+function checkEvents(){
+  if(busy||gdone||evIdx>=GEVENTS.length)return;
+  var e=GEVENTS[evIdx];
+  if(planted>=e.at){
+    busy=true;
+    document.getElementById("evYear").textContent=e.year;
+    document.getElementById("evTitle").textContent=e.title;
+    var bd=document.getElementById("evBody");bd.style.display="";bd.innerHTML=e.body;
+    document.getElementById("evBtn").textContent=e.btn;
+    document.querySelector("#evDlg .ev-paper").classList.toggle("warm",!!e.warm);
+    document.getElementById("evNote").hidden=!!e.warm;
+    reseg(evDlg);
+    evDlg.showModal();
+  }
+}
+evDlg.addEventListener("cancel",function(ev){ev.preventDefault()});
+var evPhase=1;
+function closeLetter(e){
+  evDlg.close();
+  if(e.stakes)addStakes(e.stakes);
+  if(e.unstake)removeStakes(e.unstake);
+  evIdx++;evPhase=1;busy=false;
+  TOAST.hidden=true;
+  if(e.plant)autoPlant(e.plant);
+  if(e.final){finishGame();return;}
+  checkEvents();
+}
+document.getElementById("evBtn").addEventListener("click",function(){
+  var e=GEVENTS[evIdx];
+  if(evPhase===1){
+    meets+=e.meet||0;hMeet.textContent=meets;
+    hYear.textContent=e.year+" 年";
+    if(e.after&&!e.final){
+      evPhase=2;
+      document.getElementById("evTitle").textContent=e.after;
+      var bd=document.getElementById("evBody");bd.innerHTML="";bd.style.display="none";
+      document.getElementById("evBtn").textContent=e.btn2||"回到田裡";
+      document.getElementById("evNote").hidden=true;
+      reseg(evDlg);
+      return;
+    }
+  }
+  closeLetter(e);
+});
+var certNoText="";
+function finishGame(){
+  gdone=true;
+  certNoText="NO."+(1000+Math.floor(Math.random()*9000));
+  document.getElementById("ePlant").textContent=planted;
+  document.getElementById("eMeet").textContent=meets;
+  document.getElementById("certNo").textContent=certNoText;
+  document.getElementById("certStats").textContent="插秧 "+planted+" 次・開會 "+meets+" 場・2000－2026";
+  document.getElementById("ending").hidden=false;
+  document.getElementById("gameGoal").hidden=true;
+  TOAST.hidden=true;
+  reseg(document.getElementById("ending"));
+}
+document.getElementById("replay").addEventListener("click",function(){
+  planted=0;meets=0;evIdx=0;busy=false;gdone=false;evPhase=1;
+  hPlant.textContent="0";hMeet.textContent="0";hYear.textContent="2000 年";
+  document.getElementById("ending").hidden=true;
+  document.getElementById("gameGoal").hidden=false;
+  TOAST.hidden=false;TOAST.textContent="點下去就對了，很療癒喔。";
+  buildField();
+});
+buildField();
+
+/* ============ 分享 ============ */
+function doShare(txt,btn){
+  var url=location.href;
+  if(navigator.share){
+    navigator.share({title:"璞玉田×台知園區",text:txt,url:url}).catch(function(){});
+  }else if(navigator.clipboard){
+    navigator.clipboard.writeText(txt+"\n"+url).then(function(){
+      var o=btn.textContent;btn.textContent="已複製，貼上限動吧！";
+      setTimeout(function(){btn.textContent=o},2200);
+    });
+  }
+}
+document.getElementById("shareBtn").addEventListener("click",function(){
+  doShare("我是璞玉田守田人 "+certNoText+"。我接下了阿公的田，也把它種完了。插秧 "+planted+" 次，被公文打斷 "+meets+" 次。\n8/8 千手齊插秧，回璞玉田 🌾 #守護璞玉田",this);
+});
+document.getElementById("bandShare").addEventListener("click",function(){
+  doShare("8/8 父親節「千手齊插秧」回璞玉田！訴求：停開無效聽證會、重新檢討台知計畫。一起來 🌾 #守護璞玉田 #千手齊插秧",this);
+});
+
+/* ============ 公頃網格 ============ */
+var G=document.getElementById("haGrid"),cap=document.getElementById("gridCap"),leg=document.getElementById("gridLeg");
+var cells=[];
+for(var i=0;i<447;i++){var c=document.createElement("i");G.appendChild(c);cells.push(c);}
+var LEG={
+ m447:[["take","區段徵收範圍 447"]],
+ m435:[["res","住宅 136"],["com","商業 44"],["ind","產業 72"],["pub","公設 141"],["agr","農業 42"],["cut","剔除 12"]],
+ m142:[["core","核定重大建設 142"],["keep","不用徵收的農地 305"]]
+};
+var CAPS={
+ m447:'2004 年原案：<span class="warn nb">447 格全部劃入徵收</span>。核定的重大建設其實只有 <b>142 格</b>。',
+ m435:'現行計畫約 <b>435 公頃</b>：真正的產業用地，只有 <b>72 格</b>。',
+ m142:'回到核定範圍：<b>142 格</b>做產業，<b>305 格農地</b>不用被徵收。這就是替代方案。'
+};
+var SWC={take:"var(--coral)",core:"var(--leaf-deep)",keep:"var(--z-keep)",res:"var(--z-res)",com:"var(--z-com)",ind:"var(--z-ind)",pub:"var(--z-pub)",agr:"var(--z-agr)",cut:"repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px)"};
+function setMode(m){
+  cells.forEach(function(c,i){
+    c.className="";
+    if(m==="m447"){c.classList.add("take");}
+    else if(m==="m435"){
+      if(i<136)c.classList.add("res");
+      else if(i<180)c.classList.add("com");
+      else if(i<252)c.classList.add("ind");
+      else if(i<393)c.classList.add("pub");
+      else if(i<435)c.classList.add("agr");
+      else c.classList.add("cut");
+      c.style.transitionDelay=(i%30)*8+"ms";
+    }
+    else{
+      if(i<142)c.classList.add("core");else c.classList.add("keep");
+      c.style.transitionDelay=(i%30)*8+"ms";
+    }
+  });
+  cap.innerHTML=CAPS[m];
+  leg.innerHTML=LEG[m].map(function(l){return '<span class="l"><span class="sw" style="background:'+SWC[l[0]]+'"></span>'+l[1]+'</span>'}).join("");
+  reseg(cap);reseg(leg);
+}
+document.querySelectorAll(".mode-btns button").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".mode-btns button").forEach(function(x){x.setAttribute("aria-pressed","false")});
+    b.setAttribute("aria-pressed","true");setMode(b.dataset.m);
+  });
+});
+setMode("m435");
+
+/* parks */
+function parks(el,n,cls){
+  var host=document.getElementById(el),whole=Math.floor(n),frac=n-whole;
+  for(var i=0;i<whole;i++){var p=document.createElement("i");if(cls)p.classList.add(cls);host.appendChild(p);}
+  if(frac>0.2){var h=document.createElement("i");h.className=(cls?cls+" ":"")+"half";host.appendChild(h);}
+}
+parks("parks447",447/26);
+parks("parks142",142/26,"core-p");
+
+/* ============ 名詞卡 ============ */
+var TERMS={
+ gonting:{n:"公聽會",one:"意見聽取會：可以講，但官方不一定要理。",plain:"徵收案早期依法要辦的意見場合。沒有法庭那種嚴謹程序，不能對質。你的意見會被記錄、書面回應，但法律沒要求採納。重點在「聽」，不在「決定」。",law:"土地徵收條例第 10 條；施行細則第 13 條",why:"務必用書面提意見並要求列入紀錄，日後打行政救濟才有證據。開完公聽會不等於居民同意，它不是投票。"},
+ tingzheng:{n:"聽證會",one:"準法庭程序：講了政府必須逐點回應。",plain:"由行政程序法規範，有主持人、可舉證、可對質發問、全程做成紀錄。政府作決定時必須斟酌全部聽證結果、說明理由，事後還能跳過訴願直接告。",law:"行政程序法第 54 至 66、108、109 條；土徵條例第 10 條第 3 項",why:"土地徵收只有「特農區＋重大建設＋有爭議」才強制聽證。台知正好落在這道窄門，所以聽證的範圍與效力是本案主戰場。"},
+ shuoming:{n:"說明會",one:"政府單向說明計畫，以告知為主。",plain:"重點在「說明」：解釋計畫內容與時程。比公聽會更單向，意見沒有回應拘束力。注意：辦過說明會，某些情況就能免辦公聽會。",law:"都市計畫法第 19 條；土徵條例第 10 條第 2 項但書",why:"把它當成蒐集資訊、記下官方承諾的場合。索取書面資料、記下承辦人說法。"},
+ tenong:{n:"特定農業區",one:"最優良的農地，原則上不得徵收。",plain:"生產條件最好的農地，法律給最高保護：原則不得徵收，除非經行政院核定為國家重大建設。台知園區逾九成土地是特農區。",law:"土地徵收條例第 3 條之 1、第 10 條第 3 項",why:"這是居民最硬的法律防線：超出 142 公頃核定範圍的特農區徵收，正當性有根本疑義。"},
+ qzz:{n:"區段徵收",one:"整片地一起徵收開發，地主換回縮水的抵價地。",plain:"不是收一兩筆地，是整區全收、重新規劃，再發回部分建地抵補償。常被包裝成「共享開發利益」，但本質是強制徵收：不同意也會被收。",law:"土地徵收條例第 4 條、第 39 至 44 條",why:"可能換回增值土地，但面積上限只有五成，農地生計與聚落會被連根拔起。地主利益分歧正是「同意率」爭議的來源。"},
+ yzz:{n:"一般徵收",one:"為特定公共事業，只收必要的地。",plain:"為交通、學校等特定事業徵收「所必須」的土地，範圍以事業所需為限，最容易檢驗有沒有灌水。對照之下，區段徵收的範圍彈性大得多。",law:"土地徵收條例第 3、11、14 條",why:"看懂兩種徵收的差別，就看懂了 142 公頃的需求怎麼變成 447 公頃的徵收。"},
+ dijiadi:{n:"抵價地",one:"換回的地，全區上限只有徵收面積的一半。",plain:"不領現金，改換開發後的建地。但法律規定全區抵價地以徵收總面積 50% 為原則，最低 40%。個人常換得更少，位置也可能不是原地。",law:"土地徵收條例第 39、40、44 條",why:"「地還在」是想像，實際是面積打對折、位置重新洗牌，還可能補繳差額地價。先試算再決定立場。"},
+ gongyi:{n:"公益性與必要性",one:"徵收合法的兩道門檻：非徵不可、利大於弊。",plain:"徵收是強制拿走財產，必須通過檢驗：真的是公共利益嗎？非這個範圍不可、沒有更小的替代方案嗎？法律要求具體評估，不是貼標籤就過。",law:"土地徵收條例第 3 條之 2、第 13 條",why:"反徵收最有力的戰場：142 公頃替代方案的存在，本身就是對「必要性」最直接的質疑。"},
+ yuanwei:{n:"原位置保留",one:"不擋到計畫的合法老房子，可以申請原地保留。",plain:"區段徵收裡少數能留在原地的機制，前提是「不妨礙計畫」。但計畫怎麼畫是官方主導，道路改個線就能讓你「妨礙計畫」。",law:"土地徵收條例第 47 條",why:"想保聚落，要在規劃階段就爭取道路避開老聚落，不能等徵收公告才主張。"},
+ zhuanan:{n:"專案小組",one:"都委會的小會，方向常在這裡就定了。",plain:"複雜案件先由部分委員深入審查、做成建議，再回大會。台知已開過 14 次。小會關注度低、紀錄不透明，卻常是實質方向底定的地方。",law:"無單一法律明文，屬委員會議事運作",why:"等大會才發聲常常太遲。追蹤小組開會時間、在小組階段就把意見送進去。"},
+ dushen:{n:"都市計畫",one:"決定土地能做什麼的法定計畫，變更它是徵收的前奏。",plain:"農業區一旦透過計畫變更為建地，區段徵收就有了依據。2020 年修法後，人民可以直接向法院挑戰違法的都市計畫本身。",law:"都市計畫法第 12、19 條；行政訴訟法第 237 條之 18",why:"土地的命運在計畫階段就大致決定了。等徵收公告才行動，往往太遲。"},
+ dingzi:{n:"「釘子戶」",one:"把行使權利講成貪心阻擋的標籤。",plain:"不是法律名詞。不同意徵收、質疑合法性，本來就是憲法保障的權利。這個詞把「制度是否正當」偷換成「這個人是否難搞」。",law:"非法律用語；憲法第 15、16 條，釋字第 709 號意旨",why:"語言就是戰場。改用「不同意戶」「權利人」，把討論拉回徵收的正當性。"}
+};
+var CHIP_ORDER=["gonting","tingzheng","shuoming","qzz","yzz","dijiadi","tenong","gongyi","yuanwei","zhuanan","dushen","dingzi"];
+var chipRow=document.getElementById("chipRow");
+CHIP_ORDER.forEach(function(k){
+  var b=document.createElement("button");b.textContent=TERMS[k].n;b.dataset.k=k;
+  b.setAttribute("aria-haspopup","dialog");
+  chipRow.appendChild(b);
+});
+var dlg=document.getElementById("termDlg"),lastFocus=null;
+function openTerm(k){
+  var t=TERMS[k];if(!t)return;
+  document.getElementById("dlgTitle").textContent=t.n;
+  document.getElementById("dlgOne").textContent=t.one;
+  document.getElementById("dlgPlain").textContent=t.plain;
+  document.getElementById("dlgLaw").textContent=t.law;
+  document.getElementById("dlgWhy").textContent=t.why;
+  reseg(dlg);
+  lastFocus=document.activeElement;
+  dlg.showModal();
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest("button.term,#chipRow button");
+  if(b&&b.dataset.k){openTerm(b.dataset.k);}
+});
+document.getElementById("dlgClose").addEventListener("click",function(){dlg.close()});
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",function(){if(lastFocus)lastFocus.focus()});
+
+/* ============ 大事記 ============ */
+var EV=[
+ {d:"2000.03",t:"gov",h:"璞玉計畫啟動",p:"交大與縣府簽約推動，一度規劃上千公頃。",big:1},
+ {d:"2002.10",t:"gov",h:"「炒地皮」之譏，決議縮減面積"},
+ {d:"2004.04",t:"gov",h:"行政院核定 142 公頃重大建設",p:"但區段徵收範圍劃了 447 公頃。核心落差自此開始。",big:1},
+ {d:"2007.12",t:"gov",h:"內政部區委會原則通過"},
+ {d:"2009",t:"gov",h:"縣都委會與環評過關"},
+ {d:"2011.12",t:"law",h:"土徵條例修法",p:"特定農業區從此原則不得徵收，重大建設除外。",big:1},
+ {d:"2015.12",t:"gov",h:"官方並陳「縮小至 142 公頃」案"},
+ {d:"2016.03",t:"gov",h:"都委會大會退回",p:"決議：縮小面積以 142 公頃為基礎。",big:1},
+ {d:"2018",t:"gov",h:"楊文科當選，列「竹縣五箭」重啟"},
+ {d:"2020.04",t:"gov",h:"縮為約 435 公頃，重送審議"},
+ {d:"2020.08",t:"civ",h:"百人插秧・連署破萬",p:"逾 50 個公民團體參與，插秧成為守田行動的招牌。",big:1},
+ {d:"2021.12",t:"gov",h:"第 13 次專案小組",p:"新增 53 公頃遭委員質疑「於法無據」。"},
+ {d:"2024.05",t:"gov",h:"第 14 次專案小組",p:"決議：先辦聽證，才能續審。",big:1},
+ {d:"2025.07",t:"gov",h:"聽證前說明會，邀 4,200 位地主",p:"經濟部說這只是意見蒐集，不是法定聽證程序。",big:1},
+ {d:"2026.04",t:"gov",h:"聽證會定 8 月中下旬"},
+ {d:"2026.07.16",t:"civ",h:"行政院前記者會",p:"發出 8/8 行動邀請。"},
+ {d:"2026.08.08",t:"civ",h:"千手齊插秧（預定）",p:"父親節，回到田裡。",big:1,fut:1},
+ {d:"2026.08 下旬",t:"gov",h:"正式聽證會（預定）",p:"聽證後送都委會大會審議。",big:1,fut:1}
+];
+var tl=document.getElementById("tl");
+EV.forEach(function(e){
+  var li=document.createElement("li");
+  li.dataset.t=e.t; if(e.big)li.className="big"; if(e.fut)li.classList.add("future");
+  li.innerHTML='<span class="d">'+e.d+'</span><span class="dot"></span><div class="ev reveal"><h4>'+e.h+'</h4>'+(e.p?'<p>'+e.p+'</p>':'')+'</div>';
+  tl.appendChild(li);
+});
+var tlExpanded=false;
+document.getElementById("tlToggle").addEventListener("click",function(){
+  tlExpanded=!tlExpanded;
+  tl.classList.toggle("collapsed",!tlExpanded);
+  document.getElementById("tlFilters").hidden=!tlExpanded;
+  this.textContent=tlExpanded?"只看關鍵事件":"展開完整大事記（18 件）";
+  tl.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in")});
+});
+document.querySelectorAll("#tlFilters button").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll("#tlFilters button").forEach(function(x){x.setAttribute("aria-pressed","false")});
+    b.setAttribute("aria-pressed","true");
+    var f=b.dataset.f;
+    tl.querySelectorAll("li").forEach(function(li){
+      li.classList.toggle("hidden",f!=="all"&&li.dataset.t!==f);
+    });
+  });
+});
+
+/* ============ 規劃桌 ============ */
+var PM=document.getElementById("planMap");
+var PCOLS=14,PCELLS=112,PHA=4,CORE_HA=142,DENS_P=242;
+var VILL=[16,17,44,45,37,38,74,75,94,95,68,69,51,103],VILLSET={};
+VILL.forEach(function(i){VILLSET[i]=true});
+var HOUSE_PER=290;
+var ptool="ind",pcell=[];
+var PEMOJI={ind:"🏭",res:"🏘️",pub:"🏫"};
+function pBuild(){
+  PM.innerHTML="";pcell=[];
+  for(var i=0;i<PCELLS;i++){(function(i){
+    var b=document.createElement("button");b.type="button";
+    b.className="cell"+(VILLSET[i]?" vill":"");
+    b.textContent=VILLSET[i]?"🏠":"";
+    b.setAttribute("aria-label",VILLSET[i]?"聚落":"田");
+    b.addEventListener("click",function(){pPaint(i)});
+    PM.appendChild(b);pcell.push(b);
+  })(i);}
+  pCalc();
+}
+function pSet(i,t){
+  var c=pcell[i];
+  if(t==="farm"){
+    c.className="cell"+(VILLSET[i]?" vill":"");
+    c.textContent=VILLSET[i]?"🏠":"";
+  }else{
+    c.className="cell t-"+t+(VILLSET[i]?" flat":"");
+    c.textContent=PEMOJI[t];
+  }
+}
+function pPaint(i){pSet(i,ptool);pCalc();}
+function pCount(cls){var n=0;pcell.forEach(function(c){if(c.classList.contains(cls))n++});return n;}
+function pCalc(){
+  var ind=pCount("t-ind"),res=pCount("t-res"),pub=pCount("t-pub"),demolC=pCount("flat");
+  var indHa=ind*PHA,resHa=res*PHA,pubHa=pub*PHA,land=indHa+resHa+pubHa;
+  var effInd=Math.min(indHa,CORE_HA);
+  var firms=Math.round(effInd*0.4),jobs=Math.round(effInd*70/100)*100,pop=Math.round(resHa*DENS_P/100)*100;
+  var homes=demolC*HOUSE_PER;
+  document.getElementById("pLand").textContent=land+" 公頃";
+  document.getElementById("pFirm").textContent="約 "+firms+" 家";
+  document.getElementById("pJobs").textContent="約 "+jobs.toLocaleString("zh-Hant-TW")+" 人";
+  document.getElementById("pPop").textContent="約 "+pop.toLocaleString("zh-Hant-TW")+" 人";
+  document.getElementById("pHomes").textContent=homes.toLocaleString("zh-Hant-TW")+" 戶";
+  /* 產業需求 */
+  var indPct=Math.min(100,indHa/CORE_HA*100);
+  document.getElementById("mInd").style.width=indPct+"%";
+  document.getElementById("mIndNote").textContent=indHa>=CORE_HA?(indHa>CORE_HA?"已滿足！超出的 "+(indHa-CORE_HA)+" 公頃不會再增加工作":"剛剛好，全數滿足"):"還差 "+(CORE_HA-indHa)+" 公頃";
+  /* 白鷺鷥棲地 */
+  var farmC=PCELLS-VILL.length-(ind+res+pub-demolC),farmMax=PCELLS-VILL.length;
+  var birdPct=Math.max(0,Math.round(farmC/farmMax*100));
+  document.getElementById("mBird").style.width=birdPct+"%";
+  document.getElementById("mBirdNote").textContent=birdPct>=70?"田剩 "+birdPct+"%，白鷺鷥住得很好":birdPct>=40?"田剩 "+birdPct+"%，棲地開始吃緊":"田剩 "+birdPct+"%，白鷺鷥要搬家了";
+  /* 用水壓力 */
+  var water=Math.min(100,Math.round(Math.min(indHa,CORE_HA)/CORE_HA*35+pop/43560*40+land/447*15+Math.max(0,indHa-CORE_HA)/100*10));
+  var mw=document.getElementById("mWater");
+  mw.style.width=water+"%";
+  mw.style.background=water<25?"var(--leaf)":water<55?"var(--sun)":"var(--coral)";
+  document.getElementById("mWaterNote").textContent=water<25?"壓力低":water<55?"壓力中等":"壓力高，新竹本來就常缺水";
+  /* 總結 */
+  var v=document.getElementById("pVerdict");
+  if(indHa===0&&land===0){v.className="pverdict mid";v.textContent="拿起 🏭 蓋蓋看：核定的產業需求是 142 公頃，大約 36 格。";}
+  else if(indHa<CORE_HA){v.className="pverdict mid";v.textContent="產業還沒滿足（還差 "+(CORE_HA-indHa)+" 公頃）。連自救會都同意：這部分要做。";}
+  else if(homes===0){v.className="pverdict ok";v.textContent="產業滿足了，聚落一戶都沒拆，田也還在。你排出來的，就是共存方案。";}
+  else{v.className="pverdict bad";v.textContent="產業其實早就滿足了。多蓋的部分沒有增加半個工作，卻拆了約 "+homes.toLocaleString("zh-Hant-TW")+" 戶。這就是 435 方案吵了 26 年的原因。";}
+  reseg(document.querySelector(".plan"));
+}
+document.querySelectorAll(".tools .tool").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".tools .tool").forEach(function(x){x.classList.remove("on")});
+    b.classList.add("on");ptool=b.dataset.t;
+  });
+});
+function pFill(list){
+  for(var i=0;i<PCELLS;i++)pSet(i,"farm");
+  list.forEach(function(seg){
+    var n=0,t=seg[0],want=seg[1],skipVill=seg[2];
+    for(var i=0;i<PCELLS&&n<want;i++){
+      var c=pcell[i];
+      if(c.classList.contains("t-ind")||c.classList.contains("t-res")||c.classList.contains("t-pub"))continue;
+      if(skipVill&&VILLSET[i])continue;
+      pSet(i,t);n++;
+    }
+  });
+  pCalc();
+}
+document.getElementById("pre142").addEventListener("click",function(){pFill([["ind",36,true]])});
+document.getElementById("pre435").addEventListener("click",function(){pFill([["ind",18,false],["res",45,false],["pub",35,false]])});
+document.getElementById("preClear").addEventListener("click",function(){pFill([])});
+pBuild();
+
+/* ============ 秧苗 canvas ============ */
+var cv=document.getElementById("paddy"),ctx=cv.getContext("2d");
+function drawPaddy(){
+  var w=cv.clientWidth,h=120,dpr=window.devicePixelRatio||1;
+  cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,w,h);
+  var rows=4;
+  for(var r=0;r<rows;r++){
+    var y=30+r*((h-32)/rows),scale=0.6+r/rows*0.6,step=26+r*8;
+    for(var x=10+(r%2)*step/2;x<w-4;x+=step){
+      var jx=x+Math.sin(x*7.13+r*3)*3;
+      var gold=Math.abs(Math.sin(x*3.7+r))>0.94;
+      ctx.strokeStyle=gold?"#D9992F":"#4F9A4E";
+      ctx.globalAlpha=0.45+r/rows*0.45;ctx.lineWidth=2.4;ctx.lineCap="round";
+      ctx.beginPath();ctx.moveTo(jx,y);ctx.lineTo(jx-5*scale,y-10*scale);
+      ctx.moveTo(jx,y);ctx.lineTo(jx,y-13*scale);
+      ctx.moveTo(jx,y);ctx.lineTo(jx+5*scale,y-9*scale);ctx.stroke();
+    }
+  }
+  ctx.globalAlpha=1;
+}
+drawPaddy();
+var rT;window.addEventListener("resize",function(){clearTimeout(rT);rT=setTimeout(drawPaddy,150)});
+
+/* ============ reveal ============ */
+if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}})},{threshold:0.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+}else{
+  document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in")});
+}
+
+/* ---- 全頁斷詞初始化 ---- */
+reseg(document.body);
+if(SEGON)document.body.classList.add("segged");
+})();
+</script>
+
+</body>
+</html>
