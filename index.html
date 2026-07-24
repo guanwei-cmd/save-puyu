@@ -183,6 +183,7 @@ dialog#evDlg::backdrop{background:rgba(60,48,30,.55);backdrop-filter:blur(3px)}
 .planmap{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;background:linear-gradient(#D3E7DD,#C3E0D2);border:3px solid var(--cline);border-radius:16px;padding:10px}
 .cell{all:unset;box-sizing:border-box;aspect-ratio:1;border-radius:6px;background:var(--z-agr);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:clamp(9px,2.6vw,17px);line-height:1;transition:transform .1s}
 .cell:hover{transform:scale(1.12)}
+.cell svg{width:74%;height:74%;pointer-events:none}
 .cell:focus-visible{outline:3px solid var(--leaf);outline-offset:1px}
 .cell.vill{background:#E7D9B8}
 .cell.t-ind{background:#B7CBD9}
@@ -212,14 +213,14 @@ dialog#evDlg::backdrop{background:rgba(60,48,30,.55);backdrop-filter:blur(3px)}
 .mode-btns button{font-family:var(--round);font-size:13.5px;font-weight:900;padding:9px 18px;border-radius:999px;border:2.5px solid var(--cline2);background:var(--surface);color:var(--cmut);cursor:pointer;box-shadow:0 3px 0 rgba(122,96,58,.12);white-space:nowrap}
 .mode-btns button[aria-pressed="true"]{border-color:var(--leaf);color:#FFFDF4;background:var(--leaf);box-shadow:0 3px 0 var(--leaf-deep)}
 .gridwrap{padding:24px 24px 20px;max-width:820px;margin:0 auto}
-#haGrid{display:grid;grid-template-columns:repeat(30,1fr);gap:3px}
-#haGrid i{aspect-ratio:1;border-radius:3px;background:var(--z-keep);transition:background .5s ease,opacity .5s ease}
+#haGrid{display:grid;grid-template-columns:repeat(30,1fr);gap:3.5px;padding:6px;background:linear-gradient(#F3EEDF,#EDE6D2);border-radius:12px}
+#haGrid i{aspect-ratio:1;border-radius:4px;background:var(--z-keep);box-shadow:inset 0 -2px 0 rgba(122,96,58,.10);transition:background .5s ease,opacity .45s ease,transform .5s cubic-bezier(.34,1.35,.5,1)}
 #haGrid i.res{background:var(--z-res)}
 #haGrid i.com{background:var(--z-com)}
 #haGrid i.ind{background:var(--z-ind)}
 #haGrid i.pub{background:var(--z-pub)}
 #haGrid i.agr{background:var(--z-agr)}
-#haGrid i.core{background:var(--leaf-deep)}
+#haGrid i.core{background:var(--leaf-deep);box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}
 #haGrid i.take{background:var(--coral);opacity:.6}
 #haGrid i.cut{background:repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px);opacity:.5}
 @media (max-width:640px){#haGrid{grid-template-columns:repeat(20,1fr)}}
@@ -316,6 +317,7 @@ dialog#termDlg::backdrop{background:rgba(60,48,30,.5);backdrop-filter:blur(3px)}
 .coex p{margin:0;font-size:13px;color:var(--cmut);line-height:1.75;font-weight:600}
 
 /* ---------- timeline ---------- */
+.tl-filters[hidden]{display:none}
 .tl-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 24px;justify-content:center}
 .tl-filters button{font-family:var(--round);font-size:13px;font-weight:900;padding:7px 16px;border-radius:999px;border:2.5px solid var(--cline2);background:var(--surface);color:var(--cmut);cursor:pointer}
 .tl-filters button[aria-pressed="true"]{background:var(--wood);color:#FFF7EC;border-color:var(--wood)}
@@ -338,10 +340,12 @@ dialog#termDlg::backdrop{background:rgba(60,48,30,.5);backdrop-filter:blur(3px)}
 .tl .ev p{margin:2px 0 0;font-size:13px;color:var(--cmut);line-height:1.7;font-weight:600}
 .tl .future .ev{border-style:dashed}
 @media (max-width:620px){
-  .tl::before{left:10px}
-  .tl li{grid-template-columns:0 30px 1fr}
-  .tl .d{text-align:left;grid-column:3;order:-1;padding:0 0 2px}
-  .tl .dot::before{left:2px}
+  .tl::before{left:9px}
+  .tl li{grid-template-columns:24px minmax(0,1fr);column-gap:8px}
+  .tl .dot{grid-column:1;grid-row:1 / span 2}
+  .tl .d{grid-column:2;grid-row:1;text-align:left;padding:0 0 3px;white-space:normal}
+  .tl .ev{grid-column:2;grid-row:2;min-width:0}
+  .tl .dot::before{left:1px}
 }
 .tl-more{text-align:center;margin:6px 0 0}
 
@@ -357,6 +361,7 @@ dialog#termDlg::backdrop{background:rgba(60,48,30,.5);backdrop-filter:blur(3px)}
 .band .e-btns{margin-top:12px}
 
 /* footer */
+main{overflow-x:clip}
 footer{margin-top:20px}
 .foot-in{max-width:860px;margin:0 auto;padding:8px 16px 52px;font-size:12px;color:var(--muted);line-height:2;font-weight:600}
 .foot-card{background:var(--surface);border-radius:20px;padding:22px 26px;box-shadow:var(--shadow);color:var(--cmut)}
@@ -400,7 +405,7 @@ footer{margin-top:20px}
   <div class="sec-head"><span class="leafnum">壹・接下這塊田</span><h2>阿公把田交給你了</h2></div>
   <div class="talk">
     <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><path d="M56,12 C58,8 63,7 65,9" fill="none" stroke="#8A6642" stroke-width="2"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/><path d="M20,60 C16,56 16,50 19,47" fill="none" stroke="#8A6642" stroke-width="2.5"/></svg>
-    <div class="bubble"><span class="who">小鷺</span><p>我是小鷺。你阿公還在種田的時候，我就住在這裡了。現在田交給你囉。要做的事只有一件：<b>把秧插滿 <span class="nb">30 格</span></b>。……應該很簡單吧？嘿嘿。</p></div>
+    <div class="bubble"><span class="who">小鷺</span><p>我是小鷺。你阿公還在種田的時候，我就住在這裡了。現在田交給你囉。要做的事只有一件：<b>把秧插滿 <span class="nb">52 格</span></b>。……應該很簡單吧？嘿嘿。</p></div>
   </div>
 
   <div class="card game" id="gameCard">
@@ -409,7 +414,7 @@ footer{margin-top:20px}
       <span>🌱 插秧 <b id="hPlant">0</b> 次</span>
       <span>📋 開會 <b id="hMeet">0</b> 場</span>
     </div>
-    <p class="game-goal" id="gameGoal">阿公的田，30 格。點格子，把秧插滿吧。</p>
+    <p class="game-goal" id="gameGoal">阿公的田，52 格（一年插兩期，種了 26 年）。點格子，把秧插滿吧。</p>
     <div class="field" id="field" role="group" aria-label="點格子插秧"></div>
     <p class="toast" id="toast">點下去就對了，很療癒喔。</p>
     <div class="ending" id="ending" hidden>
@@ -447,15 +452,15 @@ footer{margin-top:20px}
 <!-- ============ 貳 空間 ============ -->
 <section id="s2">
   <div class="sec-head"><span class="leafnum">貳・這塊田</span><h2>阿公的田，就在這裡</h2></div>
-  <div class="talk">
-    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
-    <div class="bubble"><span class="who">小鷺</span><p>剛剛遊戲裡說的「核定 <span class="nb">142 公頃</span>、徵收 <span class="nb">447 公頃</span>」，長這樣。<b>一個格子＝一公頃</b>，按按看三顆按鈕。</p></div>
-  </div>
   <div class="keynums" style="padding-top:0;margin-bottom:20px">
     <div class="kn"><b>26 年</b><span>2000 年推動至今</span></div>
     <div class="kn warn"><b>447 公頃</b><span>區段徵收原案<br>現行約 435 公頃</span></div>
     <div class="kn gold"><b>142 公頃</b><span>行政院核定的<br>重大建設範圍</span></div>
     <div class="kn"><b>逾 9 成</b><span>範圍內是<br>特定農業區</span></div>
+  </div>
+  <div class="talk">
+    <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
+    <div class="bubble"><span class="who">小鷺</span><p>剛剛遊戲裡說的：先劃 <span class="nb">447 公頃</span>送審，只核定 <span class="nb">142 公頃</span>，後來又放大成現行的 435。長這樣。<b>一個格子＝一公頃</b>，按按看三顆按鈕。</p></div>
   </div>
   <div class="mode-btns" role="group" aria-label="方案切換">
     <button aria-pressed="false" data-m="m447">2004 原案 447</button>
@@ -486,17 +491,16 @@ footer{margin-top:20px}
           <text x="18" y="256" font-size="12" fill="#5B7A87" font-weight="700">頭前溪</text>
           <line x1="30" y1="206" x2="430" y2="176" stroke="#B9AE93" stroke-width="4" stroke-dasharray="10 6"/>
           <circle cx="180" cy="195" r="8" fill="#8A6642"/>
-          <text x="142" y="182" font-size="12" fill="#5B4A33" font-weight="900">高鐵六家站</text>
+          <text x="128" y="182" font-size="12" fill="#5B4A33" font-weight="900">高鐵六家站</text>
+          <text x="120" y="215" font-size="10.5" fill="#5B4A33" font-weight="700">生物醫學院區</text>
           <rect x="52" y="56" width="118" height="118" fill="#F2E9CF" stroke="#CDB783" stroke-width="2" rx="12"/>
           <text x="76" y="120" font-size="12" fill="#94805F" font-weight="700">竹北市區</text>
           <path d="M196,48 L392,40 L420,116 L400,192 L292,204 L216,164 Z" fill="#BBDD90" stroke="#DE6B4C" stroke-width="3" stroke-dasharray="8 6"/>
-          <path d="M232,80 L318,74 L332,128 L248,136 Z" fill="#3A7B42"/>
-          <text x="250" y="110" font-size="11.5" fill="#FFFDF4" font-weight="900">142 公頃</text>
-          <text x="292" y="58" font-size="12" fill="#DE6B4C" font-weight="900">台知園區範圍（示意）</text>
-          <text x="228" y="184" font-size="10.5" fill="#5B4A33" font-weight="700">東海里・東興里・隘口里</text>
+          <text x="292" y="58" font-size="12" fill="#DE6B4C" font-weight="900">徵收範圍 447 公頃（示意）</text>
+          <text x="248" y="120" font-size="10.5" fill="#5B4A33" font-weight="700">東海里・東興里・隘口里</text>
           <text x="356" y="202" font-size="10.5" fill="#5B4A33" font-weight="700">芎林下山村</text>
         </svg>
-        <p class="cap">示意圖，非精確地界；正確範圍以縣府公告之計畫圖為準。</p>
+        <p class="cap">示意圖，非精確地界；正確範圍以縣府公告之計畫圖為準。核定的 142 公頃位置尚未定案，故不標示。</p>
       </div>
     </div>
   </div>
@@ -507,21 +511,21 @@ footer{margin-top:20px}
   <div class="sec-head"><span class="leafnum">參・我們想要的未來</span><h2>共存，長什麼樣子？</h2></div>
   <div class="talk">
     <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
-    <div class="bubble"><span class="who">小鷺</span><p>守田不是把時間倒回去。田友們想的未來是：<b>園區的燈亮著，田裡的秧也綠著</b>。我們把那一天排出來給你看。</p></div>
+    <div class="bubble"><span class="who">小鷺</span><p>守田不是把時間倒回去，也不是要竹北停下來。我們想的是：<b>不開發這片田，但讓它跟竹北好好相處</b>。城市的燈亮著，田裡的秧也綠著。我把那一天排給你看。</p></div>
   </div>
 
   <div class="card day">
-    <div class="d-row"><span class="d-time">05:30</span><div><p class="d-txt">阿田伯下田巡水。這片特定農業區的良田，本來就不在核定範圍裡。</p><span class="d-mech">機制：縮回 142 公頃核定範圍</span></div></div>
-    <div class="d-row"><span class="d-time">07:40</span><div><p class="d-txt">孩子們到田邊上自然課。璞玉田已經是近 30 個友善農耕與實驗教育點的基地。</p><span class="d-mech">機制：農業×教育，現在進行式</span></div></div>
-    <div class="d-row"><span class="d-time">09:00</span><div><p class="d-txt">研究員刷卡進園區上班。142 公頃核心照樣開發，產業照樣進駐。</p><span class="d-mech">機制：2004 年行政院核定範圍</span></div></div>
-    <div class="d-row"><span class="d-time">12:00</span><div><p class="d-txt">三合院開伙，四代同堂。聚落不用拆。</p><span class="d-mech">機制：原位置保留（土徵條例第 47 條）</span></div></div>
-    <div class="d-row"><span class="d-time">17:30</span><div><p class="d-txt">白鷺鷥回巢。產業需求如果真的長大，再分期評估下一塊，而不是先把田全部收走。</p><span class="d-mech">機制：分期分段開發（2016 都委會提示）</span></div></div>
+    <div class="d-row"><span class="d-time">05:30</span><div><p class="d-txt">阿田伯下田巡水。前一夜一場急降雨，因為這片田還在，水有地方去，竹北市區沒有淹。</p><span class="d-mech">機制：農地就是天然滯洪池</span></div></div>
+    <div class="d-row"><span class="d-time">07:40</span><div><p class="d-txt">孩子們到田邊上自然課、抓福壽螺。璞玉田已經是近 30 個友善農耕與實驗教育點的基地。</p><span class="d-mech">機制：生態休閒×教育，現在進行式</span></div></div>
+    <div class="d-row"><span class="d-time">12:00</span><div><p class="d-txt">三合院開伙，四代同堂。老聚落一戶都不用拆。</p><span class="d-mech">機制：不開發，聚落原地都在</span></div></div>
+    <div class="d-row"><span class="d-time">17:00</span><div><p class="d-txt">竹北人下班順路來買菜，攤上是這片田剛收的東海米。城市要的食材，田裡就有。</p><span class="d-mech">機制：在地食材，城鄉共生</span></div></div>
+    <div class="d-row"><span class="d-time">18:30</span><div><p class="d-txt">白鷺鷥回巢。竹北的燈一盞盞亮起來，田野還是綠的。城市和田，本來就可以並存。</p><span class="d-mech">機制：不必收田，也能一起好好過</span></div></div>
   </div>
-  <p class="src" style="text-align:center;max-width:560px;margin:16px auto 0">場景是願景示意，但每一行背後的機制都查證過：縮小方案有都委會決議基礎、原位置保留是現行法律、友善農耕點位是現在進行式。共存不是幻想，是既有制度就做得到的事。</p>
+  <p class="src" style="text-align:center;max-width:560px;margin:16px auto 0">場景是願景示意，但每一行的機制都是既有的事實：農地本來就有滯洪功能、友善農耕與食農教育點位是現在進行式、不開發聚落自然一戶不拆。共存不是幻想，是不亂開發就做得到的事。</p>
 
   <div class="talk" style="margin-top:44px">
     <svg viewBox="0 0 90 90" aria-hidden="true"><ellipse cx="42" cy="58" rx="22" ry="17" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><path d="M52,54 C62,48 61,34 55,25 C53,21 55,17 60,16" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><circle cx="62" cy="18" r="8.5" fill="#FDFCF6" stroke="#8A6642" stroke-width="2.5"/><polygon points="70,16 82,18.5 70,21" fill="#3D3427"/><circle cx="64.5" cy="16.5" r="1.7" fill="#3D3427"/><line x1="36" y1="74" x2="36" y2="86" stroke="#3D3427" stroke-width="2.5"/><line x1="48" y1="74" x2="48" y2="86" stroke="#3D3427" stroke-width="2.5"/><path d="M32,86 L40,86 M44,86 L52,86" stroke="#E8B33A" stroke-width="3" stroke-linecap="round"/></svg>
-    <div class="bubble"><span class="who">小鷺</span><p>規劃桌來了！選個道具，在田上蓋蓋看：<b>要放多少產業、幾家公司、多少人口，你決定</b>。棕色小屋是住了幾代人的聚落，蓋上去之前，想一下喔。</p></div>
+    <div class="bubble"><span class="who">小鷺</span><p>規劃桌來了！選個道具，在田上蓋蓋看：<b>要放多少產業、幾家公司、多少人口，你決定</b>。三合院是住了幾代人的老聚落，蓋上去之前，想一下喔。</p></div>
   </div>
 
   <div class="card plan">
@@ -532,7 +536,7 @@ footer{margin-top:20px}
       <button class="tool" data-t="farm">🌾 還原成田</button>
     </div>
     <div class="planmap" id="planMap" role="group" aria-label="規劃地圖"></div>
-    <p class="plan-hint">一格約 4 公頃，全區約 447 公頃。🏠 是聚落，一格約 290 戶。</p>
+    <p class="plan-hint">一格約 4 公頃，全區約 447 公頃。三合院是住了幾代人的聚落，一格約 290 戶。</p>
 
     <div class="dash">
       <div class="dchip"><b id="pLand">0 公頃</b><span>已開發土地</span></div>
@@ -673,7 +677,7 @@ footer{margin-top:20px}
     <button aria-pressed="false" data-f="law">法規</button>
   </div>
   <ol class="tl collapsed" id="tl"></ol>
-  <div class="tl-more"><button class="btn second" id="tlToggle">展開完整大事記（18 件）</button></div>
+  <div class="tl-more"><button class="btn second" id="tlToggle">展開完整大事記（19 件）</button></div>
   <p class="src" style="text-align:center;max-width:560px;margin:16px auto 0">事件經多來源交叉查核：焦點事件、新竹縣政府都市計畫紀錄、環境資訊中心、公視新聞、客新聞、環境權保障基金會。完整出處連結見頁尾。</p>
 </section>
 
@@ -778,19 +782,19 @@ var SPROUT='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 V10 M12 
 var GEVENTS=[
  {at:1,year:"2000・春",title:"阿公的信",warm:1,body:'阿田：<br>阿公老了，這塊田交給你。<br>春天記得插秧，田埂上的白鷺鷥會陪你。<br>田在，家就在。<span style="display:block;text-align:right;margin-top:6px">——阿公</span>',btn:"我會好好種的",meet:0,after:"田是你的了。慢慢種，不急。",btn2:"開始插秧"},
  {at:3,year:"2000",title:"璞玉計畫來了",body:'交大與縣府簽約推動大型開發計畫，阿公留給你的田，就在規劃範圍裡。里長說：要去開說明會喔。',btn:"放下鋤頭，去開會",meet:1,after:"第一場說明會開完了。你聽到好多聽不懂的新名詞。"},
- {at:6,year:"2004",title:"行政院核定了",body:'核定的重大建設是 <span class="nb">142 公頃</span>，但區段徵收範圍劃了 <span class="nb">447 公頃</span>。阿公的田，在那 447 裡面。',btn:"放下鋤頭，去開會",meet:1,stakes:5,after:"開完會回來，田邊多了幾支紅色測量樁。"},
- {at:9,year:"2011",title:"法律修了",body:'土徵條例修正：特定農業區原則不得徵收。村裡的人覺得，有希望了。',btn:"放下鋤頭，去開會",meet:1,after:"這次開會，大家討論到半夜才回家。"},
- {at:12,year:"2015–2016",title:"都委會退回計畫",body:'審了又審，內政部都委會大會決議：縮小面積，以 <span class="nb">142 公頃</span>為基礎。',btn:"放下鋤頭，去開會",meet:2,unstake:3,after:"有幾支紅樁被拔掉了。今年的稻子，特別甜。"},
- {at:15,year:"2018–2020",title:"計畫又回來了",body:'新縣長把計畫列為政見重啟，縮成 <span class="nb">435 公頃</span>重新送審。',btn:"放下鋤頭，去開會",meet:1,stakes:4,after:"紅樁又插回來了。秧，還是要插。"},
- {at:18,year:"2020.08",title:"這次不開會了",warm:1,body:'百人插秧、上萬人連署。大家決定用阿公的方式守田：把秧，種回去。',btn:"大家一起下田！",meet:0,plant:6,after:"一百雙手一起插秧，半片田一天就插完了。",btn2:"太好了，繼續種！"},
- {at:24,year:"2021–2024",title:"第 13、14 次專案小組",body:'委員說新增的 <span class="nb">53 公頃</span>「於法無據」；後來又決議：要先辦聽證，才能繼續審。',btn:"放下鋤頭，去開會",meet:2,after:"你已經數不清，這是第幾場會了。"},
- {at:27,year:"2025.07",title:"4,200 封開會通知",body:'聽證前說明會寄出 <span class="nb">4,200 份</span>通知。經濟部說：這不是法定聽證，只是意見蒐集。',btn:"放下鋤頭，去開會",meet:1,after:"又一場「不算數」的會。通知單收進抽屜，裡面已經一疊了。"},
- {at:30,year:"2026.07",title:"下一個插秧的日子",warm:1,body:'正式聽證會訂在 8 月中下旬。而 <span class="nb">8 月 8 日</span>父親節，田友們約好回到田裡，一起插秧。阿公的田，等你。',btn:"先把秧插完",meet:0,final:1}
+ {at:9,year:"2004",title:"行政院核定了",body:'區段徵收先劃了 <span class="nb">447 公頃</span>送審，行政院卻只核定 <span class="nb">142 公頃</span>重大建設。阿公的田，就在被多劃進去的那一大片裡。',btn:"放下鋤頭，去開會",meet:1,stakes:5,after:"開完會回來，田邊多了幾支紅色測量樁。"},
+ {at:23,year:"2011",title:"法律修了",body:'土徵條例修正：特定農業區原則不得徵收。村裡的人覺得，有希望了。',btn:"放下鋤頭，去開會",meet:1,after:"這次開會，大家討論到半夜才回家。"},
+ {at:31,year:"2015–2016",title:"都委會退回計畫",body:'審了又審，內政部都委會大會決議：縮小面積，以 <span class="nb">142 公頃</span>為基礎。',btn:"放下鋤頭，去開會",meet:2,unstake:3,after:"有幾支紅樁被拔掉了。今年的稻子，特別甜。"},
+ {at:38,year:"2018–2020",title:"計畫又回來了",body:'新任縣長 <span class="nb">楊文科</span> 把計畫列為政見重啟，縮成 <span class="nb">435 公頃</span>重新送審。',btn:"放下鋤頭，去開會",meet:1,stakes:4,after:"紅樁又插回來了。秧，還是要插。"},
+ {at:41,year:"2020.08",title:"這次不開會了",warm:1,body:'百人插秧、上萬人連署。大家決定用阿公的方式守田：把秧，種回去。',btn:"大家一起下田！",meet:0,plant:5,after:"一百雙手一起插秧，一大片田一天就插完了。",btn2:"太好了，繼續種！"},
+ {at:46,year:"2021–2024",title:"第 13、14 次專案小組",body:'委員說新增的 <span class="nb">53 公頃</span>「於法無據」；後來又決議：要先辦聽證，才能繼續審。',btn:"放下鋤頭，去開會",meet:2,after:"你已經數不清，這是第幾場會了。"},
+ {at:50,year:"2025.07",title:"4,200 封開會通知",body:'原案在內政部，時任立委、要選新竹縣長的 <span class="nb">徐欣瑩</span> 要求要有部會承擔，全案才落到經濟部。經濟部隨後寄出 <span class="nb">4,200 份</span>說明會通知，卻說：這不是法定聽證，只是意見蒐集。',btn:"放下鋤頭，去開會",meet:1,after:"又一場「不算數」的會。通知單收進抽屜，裡面已經一疊了。"},
+ {at:52,year:"2026.07",title:"下一個插秧的日子",warm:1,body:'正式聽證會訂在 8 月中下旬。而 <span class="nb">8 月 8 日</span>父親節，田友們約好回到田裡，一起插秧。阿公的田，等你。',btn:"先把秧插完",meet:0,final:1}
 ];
 var planted=0,meets=0,evIdx=0,plots=[],busy=false,gdone=false;
 function buildField(){
   FIELD.innerHTML="";plots=[];
-  for(var i=0;i<30;i++){(function(i){
+  for(var i=0;i<52;i++){(function(i){
     var b=document.createElement("button");b.className="plot";b.type="button";b.setAttribute("aria-label","插秧");
     b.addEventListener("click",function(){plantAt(i)});
     FIELD.appendChild(b);plots.push(b);
@@ -920,11 +924,15 @@ var LEG={
 };
 var CAPS={
  m447:'2004 年原案：<span class="warn nb">447 格全部劃入徵收</span>。核定的重大建設其實只有 <b>142 格</b>。',
- m435:'現行計畫約 <b>435 公頃</b>：真正的產業用地，只有 <b>72 格</b>。',
- m142:'回到核定範圍：<b>142 格</b>做產業，<b>305 格農地</b>不用被徵收。這就是替代方案。'
+ m435:'現行計畫約 <b>435 公頃</b>：真正的產業用地只有 <b>72 格</b>，其餘的房子、田、聚落全被重新洗牌分區。',
+ m142:'退守核定的 <b>142 格</b>：就算擋不下全部，也把開發鎖在這裡，另外 <b>305 格農地</b>一格都不徵收。這是最後防線，也是拖住整案的籌碼。'
 };
 var SWC={take:"var(--coral)",core:"var(--leaf-deep)",keep:"var(--z-keep)",res:"var(--z-res)",com:"var(--z-com)",ind:"var(--z-ind)",pub:"var(--z-pub)",agr:"var(--z-agr)",cut:"repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px)"};
 function setMode(m){
+  /* 重組前：全部縮起來（像硬碟重組，房子、工廠、公設要被重新洗牌） */
+  cells.forEach(function(c){c.style.transform="scale(.28)";c.style.opacity=".12";});
+  void G.offsetWidth;
+  /* 重組後：依方案分區，逐格波浪展開歸位 */
   cells.forEach(function(c,i){
     c.className="";
     if(m==="m447"){c.classList.add("take");}
@@ -935,12 +943,12 @@ function setMode(m){
       else if(i<393)c.classList.add("pub");
       else if(i<435)c.classList.add("agr");
       else c.classList.add("cut");
-      c.style.transitionDelay=(i%30)*8+"ms";
     }
     else{
       if(i<142)c.classList.add("core");else c.classList.add("keep");
-      c.style.transitionDelay=(i%30)*8+"ms";
     }
+    c.style.transitionDelay=(i%30)*7+"ms";
+    c.style.transform="";c.style.opacity="";
   });
   cap.innerHTML=CAPS[m];
   leg.innerHTML=LEG[m].map(function(l){return '<span class="l"><span class="sw" style="background:'+SWC[l[0]]+'"></span>'+l[1]+'</span>'}).join("");
@@ -1009,7 +1017,7 @@ dlg.addEventListener("close",function(){if(lastFocus)lastFocus.focus()});
 var EV=[
  {d:"2000.03",t:"gov",h:"璞玉計畫啟動",p:"交大與縣府簽約推動，一度規劃上千公頃。",big:1},
  {d:"2002.10",t:"gov",h:"「炒地皮」之譏，決議縮減面積"},
- {d:"2004.04",t:"gov",h:"行政院核定 142 公頃重大建設",p:"但區段徵收範圍劃了 447 公頃。核心落差自此開始。",big:1},
+ {d:"2004.04",t:"gov",h:"劃 447 送審，只核定 142",p:"區段徵收原案劃了 447 公頃送審，行政院卻只核定 142 公頃重大建設。核心落差自此開始。",big:1},
  {d:"2007.12",t:"gov",h:"內政部區委會原則通過"},
  {d:"2009",t:"gov",h:"縣都委會與環評過關"},
  {d:"2011.12",t:"law",h:"土徵條例修法",p:"特定農業區從此原則不得徵收，重大建設除外。",big:1},
@@ -1020,6 +1028,7 @@ var EV=[
  {d:"2020.08",t:"civ",h:"百人插秧・連署破萬",p:"逾 50 個公民團體參與，插秧成為守田行動的招牌。",big:1},
  {d:"2021.12",t:"gov",h:"第 13 次專案小組",p:"新增 53 公頃遭委員質疑「於法無據」。"},
  {d:"2024.05",t:"gov",h:"第 14 次專案小組",p:"決議：先辦聽證，才能續審。",big:1},
+ {d:"2025 上半",t:"gov",h:"全案從內政部轉由經濟部主辦",p:"時任立委、參選新竹縣長的徐欣瑩要求須有部會承擔，全案改由經濟部接手。",big:1},
  {d:"2025.07",t:"gov",h:"聽證前說明會，邀 4,200 位地主",p:"經濟部說這只是意見蒐集，不是法定聽證程序。",big:1},
  {d:"2026.04",t:"gov",h:"聽證會定 8 月中下旬"},
  {d:"2026.07.16",t:"civ",h:"行政院前記者會",p:"發出 8/8 行動邀請。"},
@@ -1053,6 +1062,7 @@ document.querySelectorAll("#tlFilters button").forEach(function(b){
 });
 
 /* ============ 規劃桌 ============ */
+var SANHE='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 21 V10 L5.5 7 H18.5 L21.5 10 V21 H14.5 V14 H9.5 V21 Z" fill="#CE9A5F" stroke="#7E5330" stroke-width="1.1" stroke-linejoin="round"/><path d="M2.5 10 L5.5 7 H18.5 L21.5 10 Z" fill="#9A6238"/><rect x="10.6" y="16" width="2.8" height="5" rx="1" fill="#7E5330"/></svg>';
 var PM=document.getElementById("planMap");
 var PCOLS=14,PCELLS=112,PHA=4,CORE_HA=142,DENS_P=242;
 var VILL=[16,17,44,45,37,38,74,75,94,95,68,69,51,103],VILLSET={};
@@ -1065,7 +1075,7 @@ function pBuild(){
   for(var i=0;i<PCELLS;i++){(function(i){
     var b=document.createElement("button");b.type="button";
     b.className="cell"+(VILLSET[i]?" vill":"");
-    b.textContent=VILLSET[i]?"🏠":"";
+    if(VILLSET[i]){b.innerHTML=SANHE;}else{b.textContent="";}
     b.setAttribute("aria-label",VILLSET[i]?"聚落":"田");
     b.addEventListener("click",function(){pPaint(i)});
     PM.appendChild(b);pcell.push(b);
@@ -1076,7 +1086,7 @@ function pSet(i,t){
   var c=pcell[i];
   if(t==="farm"){
     c.className="cell"+(VILLSET[i]?" vill":"");
-    c.textContent=VILLSET[i]?"🏠":"";
+    if(VILLSET[i]){c.innerHTML=SANHE;}else{c.textContent="";}
   }else{
     c.className="cell t-"+t+(VILLSET[i]?" flat":"");
     c.textContent=PEMOJI[t];
@@ -1113,7 +1123,7 @@ function pCalc(){
   /* 總結 */
   var v=document.getElementById("pVerdict");
   if(indHa===0&&land===0){v.className="pverdict mid";v.textContent="拿起 🏭 蓋蓋看：核定的產業需求是 142 公頃，大約 36 格。";}
-  else if(indHa<CORE_HA){v.className="pverdict mid";v.textContent="產業還沒滿足（還差 "+(CORE_HA-indHa)+" 公頃）。連自救會都同意：這部分要做。";}
+  else if(indHa<CORE_HA){v.className="pverdict mid";v.textContent="核定的產業需求就是這 142 公頃（還差 "+(CORE_HA-indHa)+" 公頃）。真正的爭議從來不是這 142，而是被一起綁進來徵收的那 300 公頃。";}
   else if(homes===0){v.className="pverdict ok";v.textContent="產業滿足了，聚落一戶都沒拆，田也還在。你排出來的，就是共存方案。";}
   else{v.className="pverdict bad";v.textContent="產業其實早就滿足了。多蓋的部分沒有增加半個工作，卻拆了約 "+homes.toLocaleString("zh-Hant-TW")+" 戶。這就是 435 方案吵了 26 年的原因。";}
   reseg(document.querySelector(".plan"));
