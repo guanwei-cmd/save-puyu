@@ -127,7 +127,8 @@ h2{font-size:clamp(1.5rem,3.6vw,2.1rem);margin:12px 0 4px;font-weight:900;line-h
 .hud .hud-year{background:var(--wood);color:#FFF7EC}
 .hud b{color:var(--leaf-deep);font-variant-numeric:tabular-nums}
 .game-goal{text-align:center;font-weight:900;font-size:15.5px;margin:2px 0 14px}
-.field{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;background:linear-gradient(#D3E7DD,#C3E0D2);border-radius:18px;padding:12px;border:3px solid var(--cline)}
+.field{display:grid;grid-template-columns:repeat(13,1fr);gap:5px;background:linear-gradient(#D3E7DD,#C3E0D2);border-radius:18px;padding:12px;border:3px solid var(--cline)}
+@media(max-width:640px){.field{grid-template-columns:repeat(8,1fr);gap:4px;padding:9px;border-radius:14px}}
 .plot{all:unset;box-sizing:border-box;cursor:pointer;aspect-ratio:1;border-radius:10px;background:#B0D4C6;position:relative;transition:transform .12s}
 .plot:hover{transform:scale(1.06)}
 .plot:focus-visible{outline:3px solid var(--leaf);outline-offset:2px}
@@ -782,14 +783,14 @@ var SPROUT='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 V10 M12 
 var GEVENTS=[
  {at:1,year:"2000・春",title:"阿公的信",warm:1,body:'阿田：<br>阿公老了，這塊田交給你。<br>春天記得插秧，田埂上的白鷺鷥會陪你。<br>田在，家就在。<span style="display:block;text-align:right;margin-top:6px">——阿公</span>',btn:"我會好好種的",meet:0,after:"田是你的了。慢慢種，不急。",btn2:"開始插秧"},
  {at:3,year:"2000",title:"璞玉計畫來了",body:'交大與縣府簽約推動大型開發計畫，阿公留給你的田，就在規劃範圍裡。里長說：要去開說明會喔。',btn:"放下鋤頭，去開會",meet:1,after:"第一場說明會開完了。你聽到好多聽不懂的新名詞。"},
- {at:9,year:"2004",title:"行政院核定了",body:'區段徵收先劃了 <span class="nb">447 公頃</span>送審，行政院卻只核定 <span class="nb">142 公頃</span>重大建設。阿公的田，就在被多劃進去的那一大片裡。',btn:"放下鋤頭，去開會",meet:1,stakes:5,after:"開完會回來，田邊多了幾支紅色測量樁。"},
- {at:23,year:"2011",title:"法律修了",body:'土徵條例修正：特定農業區原則不得徵收。村裡的人覺得，有希望了。',btn:"放下鋤頭，去開會",meet:1,after:"這次開會，大家討論到半夜才回家。"},
- {at:31,year:"2015–2016",title:"都委會退回計畫",body:'審了又審，內政部都委會大會決議：縮小面積，以 <span class="nb">142 公頃</span>為基礎。',btn:"放下鋤頭，去開會",meet:2,unstake:3,after:"有幾支紅樁被拔掉了。今年的稻子，特別甜。"},
- {at:38,year:"2018–2020",title:"計畫又回來了",body:'新任縣長 <span class="nb">楊文科</span> 把計畫列為政見重啟，縮成 <span class="nb">435 公頃</span>重新送審。',btn:"放下鋤頭，去開會",meet:1,stakes:4,after:"紅樁又插回來了。秧，還是要插。"},
- {at:41,year:"2020.08",title:"這次不開會了",warm:1,body:'百人插秧、上萬人連署。大家決定用阿公的方式守田：把秧，種回去。',btn:"大家一起下田！",meet:0,plant:5,after:"一百雙手一起插秧，一大片田一天就插完了。",btn2:"太好了，繼續種！"},
- {at:46,year:"2021–2024",title:"第 13、14 次專案小組",body:'委員說新增的 <span class="nb">53 公頃</span>「於法無據」；後來又決議：要先辦聽證，才能繼續審。',btn:"放下鋤頭，去開會",meet:2,after:"你已經數不清，這是第幾場會了。"},
- {at:50,year:"2025.07",title:"4,200 封開會通知",body:'原案在內政部，時任立委、要選新竹縣長的 <span class="nb">徐欣瑩</span> 要求要有部會承擔，全案才落到經濟部。經濟部隨後寄出 <span class="nb">4,200 份</span>說明會通知，卻說：這不是法定聽證，只是意見蒐集。',btn:"放下鋤頭，去開會",meet:1,after:"又一場「不算數」的會。通知單收進抽屜，裡面已經一疊了。"},
- {at:52,year:"2026.07",title:"下一個插秧的日子",warm:1,body:'正式聽證會訂在 8 月中下旬。而 <span class="nb">8 月 8 日</span>父親節，田友們約好回到田裡，一起插秧。阿公的田，等你。',btn:"先把秧插完",meet:0,final:1}
+ {at:6,year:"2004",title:"行政院核定了",body:'區段徵收先劃了 <span class="nb">447 公頃</span>送審，行政院卻只核定 <span class="nb">142 公頃</span>重大建設。阿公的田，就在被多劃進去的那一大片裡。',btn:"放下鋤頭，去開會",meet:1,stakes:5,after:"開完會回來，田邊多了幾支紅色測量樁。"},
+ {at:9,year:"2011",title:"法律修了",body:'土徵條例修正：特定農業區原則不得徵收。村裡的人覺得，有希望了。',btn:"放下鋤頭，去開會",meet:1,after:"這次開會，大家討論到半夜才回家。"},
+ {at:12,year:"2015–2016",title:"都委會退回計畫",body:'審了又審，內政部都委會大會決議：縮小面積，以 <span class="nb">142 公頃</span>為基礎。',btn:"放下鋤頭，去開會",meet:2,unstake:3,plant:3,after:"有幾支紅樁被拔掉了，田友們也來幫忙補秧。今年的稻子，特別甜。"},
+ {at:16,year:"2018–2020",title:"計畫又回來了",body:'新任縣長 <span class="nb">楊文科</span> 把計畫列為政見重啟，改以 <span class="nb">435 公頃</span>（只比原案少 12 公頃）重新送審。',btn:"放下鋤頭，去開會",meet:1,stakes:4,after:"紅樁又插回來了。秧，還是要插。"},
+ {at:19,year:"2020.08",title:"這次不開會了",warm:1,body:'百人插秧、上萬人連署。大家決定用阿公的方式守田：把秧，種回去。',btn:"大家一起下田！",meet:0,plant:20,after:"一百雙手一起插秧，一大片田一天就插完了。",btn2:"太好了，繼續種！"},
+ {at:39,year:"2021–2024",title:"第 13、14 次專案小組",body:'委員說新增的 <span class="nb">53 公頃</span>「於法無據」；後來又決議：要先辦聽證，才能繼續審。',btn:"放下鋤頭，去開會",meet:2,after:"你已經數不清，這是第幾場會了。"},
+ {at:43,year:"2025.07",title:"4,200 封開會通知",body:'原案在內政部，時任立委、要選新竹縣長的 <span class="nb">徐欣瑩</span> 要求要有部會承擔，全案才落到經濟部。經濟部隨後寄出 <span class="nb">4,200 份</span>說明會通知，卻說：這不是法定聽證，只是意見蒐集。',btn:"放下鋤頭，去開會",meet:1,after:"又一場「不算數」的會。通知單收進抽屜，裡面已經一疊了。"},
+ {at:47,year:"2026.07",title:"下一個插秧的日子",warm:1,body:'正式聽證會訂在 8 月中下旬。而 <span class="nb">8 月 8 日</span>父親節，田友們約好回到田裡，一起插秧。阿公的田，等你。',btn:"和大家一起，把秧插完",meet:0,plant:52,final:1}
 ];
 var planted=0,meets=0,evIdx=0,plots=[],busy=false,gdone=false;
 function buildField(){
@@ -1024,7 +1025,7 @@ var EV=[
  {d:"2015.12",t:"gov",h:"官方並陳「縮小至 142 公頃」案"},
  {d:"2016.03",t:"gov",h:"都委會大會退回",p:"決議：縮小面積以 142 公頃為基礎。",big:1},
  {d:"2018",t:"gov",h:"楊文科當選，列「竹縣五箭」重啟"},
- {d:"2020.04",t:"gov",h:"縮為約 435 公頃，重送審議"},
+ {d:"2020.04",t:"gov",h:"改以約 435 公頃重送審議",p:"只比原案少 12 公頃，徵收範圍幾乎沒動。"},
  {d:"2020.08",t:"civ",h:"百人插秧・連署破萬",p:"逾 50 個公民團體參與，插秧成為守田行動的招牌。",big:1},
  {d:"2021.12",t:"gov",h:"第 13 次專案小組",p:"新增 53 公頃遭委員質疑「於法無據」。"},
  {d:"2024.05",t:"gov",h:"第 14 次專案小組",p:"決議：先辦聽證，才能續審。",big:1},
