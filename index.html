@@ -23,7 +23,7 @@
   --coral:#DE6B4C; --coral-tint:#FBE4DA;
   --sun:#D9992F; --sun-tint:#FAEDCF;
   --wood:#8A6642; --wood-deep:#6E4F31;
-  --z-res:#E9C66C; --z-com:#DE9A60; --z-ind:#4F9A4E; --z-pub:#A3B9C6; --z-agr:#A9D07F; --z-keep:#EDF2D6;
+  --z-res:#E9C66C; --z-com:#DE9A60; --z-ind:#6E6B63; --z-pub:#A3B9C6; --z-agr:#A9D07F; --z-keep:#EDF2D6;
   --shadow:0 3px 0 rgba(122,96,58,.14),0 10px 24px rgba(122,96,58,.13);
   --round:"Yuanti TC","STYuanti-TC","Yuanti SC","YouYuan","Chalkboard SE","PingFang TC","Noto Sans TC",sans-serif;
   --mono:ui-monospace,"SF Mono",Menlo,monospace;
@@ -187,7 +187,7 @@ dialog#evDlg::backdrop{background:rgba(60,48,30,.55);backdrop-filter:blur(3px)}
 .cell svg{width:74%;height:74%;pointer-events:none}
 .cell:focus-visible{outline:3px solid var(--leaf);outline-offset:1px}
 .cell.vill{background:#E7D9B8}
-.cell.t-ind{background:#B7CBD9}
+.cell.t-ind{background:#9B9890}
 .cell.t-res{background:#EFD9A0}
 .cell.t-pub{background:#CFCAB8}
 .cell.flat{box-shadow:inset 0 0 0 3px var(--coral)}
@@ -221,7 +221,7 @@ dialog#evDlg::backdrop{background:rgba(60,48,30,.55);backdrop-filter:blur(3px)}
 #haGrid i.ind{background:var(--z-ind)}
 #haGrid i.pub{background:var(--z-pub)}
 #haGrid i.agr{background:var(--z-agr)}
-#haGrid i.core{background:var(--leaf-deep);box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}
+#haGrid i.core{background:#6E6B63;box-shadow:inset 0 -2px 0 rgba(0,0,0,.22)}
 #haGrid i.take{background:var(--coral);opacity:.6}
 #haGrid i.cut{background:repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px);opacity:.5}
 @media (max-width:640px){#haGrid{grid-template-columns:repeat(20,1fr)}}
@@ -928,7 +928,7 @@ var CAPS={
  m435:'現行計畫約 <b>435 公頃</b>：真正的產業用地只有 <b>72 格</b>，其餘的房子、田、聚落全被重新洗牌分區。',
  m142:'回到行政院核定的 <b>142 格</b>：產業真正要用的就是這些，另外 <b>305 格農地</b>依法本來就不必被徵收。'
 };
-var SWC={take:"var(--coral)",core:"var(--leaf-deep)",keep:"var(--z-keep)",res:"var(--z-res)",com:"var(--z-com)",ind:"var(--z-ind)",pub:"var(--z-pub)",agr:"var(--z-agr)",cut:"repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px)"};
+var SWC={take:"var(--coral)",core:"#6E6B63",keep:"var(--z-keep)",res:"var(--z-res)",com:"var(--z-com)",ind:"var(--z-ind)",pub:"var(--z-pub)",agr:"var(--z-agr)",cut:"repeating-linear-gradient(45deg,var(--cfaint) 0 2px,transparent 2px 5px)"};
 function setMode(m){
   /* 重組前：全部縮起來（像硬碟重組，房子、工廠、公設要被重新洗牌） */
   cells.forEach(function(c){c.style.transform="scale(.28)";c.style.opacity=".12";});
